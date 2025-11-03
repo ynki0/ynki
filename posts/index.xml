@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Ynki blog</title>
-    <link>http://blog.ynki/posts/</link>
+    <link>https://ynki.website/posts/</link>
     <description>Recent content in Posts on Ynki blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://blog.ynki/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ynki.website/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hi 👋, I&#39;m Ynki!</title>
-      <link>http://blog.ynki/posts/first-post/</link>
+      <link>https://ynki.website/posts/first-post/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://blog.ynki/posts/first-post/</guid>
+      <guid>https://ynki.website/posts/first-post/</guid>
       <description>&lt;p&gt;What deliver 🔧&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;Software &amp;amp; systems: core platforms, high-performance services.&#xA;Driver development: Windows/Linux kernel and device drivers, tooling.&#xA;Web engineering: lean backends, stable APIs, admin tooling, integrations.&#xA;Mobile: native iOS/Android or cross-platform only when it fits.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;How work 🧭&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;Direct collaboration: one call to the engineers doing the work.&#xA;Short iterations: clear milestones, demos, measurable outcomes.&#xA;Plain architecture: auditable designs, reproducible builds, no bloat.&#xA;Quality by default: tests, reviews, observability.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Pricing and engagement 💶&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;Cost-efficient (yes, cheap) rates with transparent estimates.&#xA;Fixed-bid or time-and-materials. Your choice.&#xA;No lock-in. You own the code and the keys.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Capabilities &amp;amp; stack ⚙️&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;Languages: C, C++, C#, React, Python, TypeScript/Node.js, Go, Java, Kotlin, Bash&#xA;Drivers: Windows WDK, KMDF/UMDF&#xA;Web &amp;amp; services: .NET, Node (Express/Fastify), gRPC/REST, WebSockets, PHP&#xA;Data &amp;amp; queues: PostgreSQL, Redis, SQLite&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;To start a conversation, open an issue or reach out via the org profile. 📩&lt;/p&gt;</description>
     </item>
   </channel>
