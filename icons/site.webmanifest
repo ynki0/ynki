@@ -1,0 +1,19 @@
+{
+  "name": "Ynki Blog",
+  "short_name": "Ynki",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#111111",
+  "background_color": "#111111",
+  "display": "standalone"
+}
