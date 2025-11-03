@@ -101,7 +101,7 @@ Data &amp; queues: PostgreSQL, Redis, SQLite
     </div>
 
     <footer style="margin-top: 3rem; padding: 2rem 0; text-align: center; font-size: 0.9rem; color: #888; border-top: 1px solid #222;">
-  <p style="margin: 0.2rem 0;">© 2018 ynki</p>
+  <p style="margin: 0.2rem 0;">© 2024 ynki</p>
   <p style="margin: 0.2rem 0;">
     <a href="https://github.com/ynki0" style="color: #f92672; text-decoration: none;">GitHub</a> ·
     <a href="https://t.me/ynki01" style="color: #f92672; text-decoration: none;">Telegram</a> ·
@@ -109,9 +109,47 @@ Data &amp; queues: PostgreSQL, Redis, SQLite
 	<a href="https://discord.gg/QpKnRjCrUm" style="color: #f92672; text-decoration: none;">Discord</a>
   </p>
   <p style="margin-top: 0.4rem; font-size: 0.8rem; color: #666;">
-    Тема: <a href="https://github.com/vividvilla/ezhil" style="color: #999; text-decoration: none;">Ezhil</a> · Сайт создан с <a href="https://gohugo.io" style="color: #999; text-decoration: none;">Hugo</a>
+    Theme: <a href="https://github.com/vividvilla/ezhil" style="color: #999; text-decoration: none;">Ezhil</a> · Built with <a href="https://gohugo.io" style="color: #999; text-decoration: none;">Hugo</a>
   </p>
 </footer>
 
+<audio id="bg-music" autoplay loop>
+  <source src="/music/theme.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
+  <button id="music-btn" style="
+    background: none;
+    border: 2px solid #ff4081;
+    color: #ff4081;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+  " title="Play / Pause">🎵</button>
+</div>
+
+<script>
+  const music = document.getElementById('bg-music');
+  const btn = document.getElementById('music-btn');
+  let isPlaying = false;
+
+  btn.addEventListener('click', () => {
+    if (!isPlaying) {
+      music.play();
+      btn.style.background = '#ff4081';
+      btn.style.color = '#000';
+      isPlaying = true;
+    } else {
+      music.pause();
+      btn.style.background = 'none';
+      btn.style.color = '#ff4081';
+      isPlaying = false;
+    }
+  });
+</script>
   </body>
 </html>
