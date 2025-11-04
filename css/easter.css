@@ -1,0 +1,14 @@
+#snake-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,.9);
+  display:flex; align-items:center; justify-content:center;
+  z-index:9999;
+}
+#snake-canvas{
+  border:2px solid #4ade80; box-shadow:0 0 20px #22c55e80;
+}
+#snake-close{
+  position:absolute; top:20px; right:20px;
+  background:none; border:2px solid #fff;
+  color:#fff; font-size:20px; border-radius:50%;
+  width:40px; height:40px; cursor:pointer;
+}
