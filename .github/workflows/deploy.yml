@@ -1,32 +1,42 @@
-name: Build and Deploy Hugo Site
+name: Deploy Hugo site with Telegram config
 
 on:
   push:
-    branches:
-      - main  
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download repo
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
+        uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "latest"
+          hugo-version: "0.121.0"
 
-      - name: Build site
+      - name: Build Hugo site
         run: hugo --minify
 
-      - name: Inject secrets into config.env
+      - name: Create config.js with Telegram secrets
         run: |
-          echo "TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}" >> ./public/config.env
-          echo "TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}" >> ./public/config.env
+          mkdir -p ./public/js
+          echo "window.TELEGRAM_BOT_TOKEN='${{ secrets.TELEGRAM_BOT_TOKEN }}';" > ./public/js/config.js
+          echo "window.TELEGRAM_CHAT_ID='${{ secrets.TELEGRAM_CHAT_ID }}';" >> ./public/js/config.js
+          echo "✅ Created config.js with Telegram secrets"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+        id: deployment
+        uses: actions/deploy-pages@v4
