@@ -561,7 +561,7 @@ body {
 
 <style>
 
- 
+
 #contact {
   max-width: 520px;
   margin: 80px auto;
@@ -572,7 +572,7 @@ body {
   font-family: "Inter", "Segoe UI", sans-serif;
 }
 
- 
+
 #contact h2 {
   text-align: center;
   font-size: 1.6rem;
@@ -582,7 +582,7 @@ body {
   letter-spacing: 0.5px;
 }
 
- 
+
 .project-form {
   display: flex;
   flex-direction: column;
@@ -625,7 +625,7 @@ body {
   border-color: #ffb400;
 }
 
- 
+
 .project-types {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -635,7 +635,7 @@ body {
   width: 100%;
 }
 
- 
+
 .project-types label {
   position: relative;  
   background: #1a1a1a;
@@ -661,7 +661,7 @@ body {
   display: none;
 }
 
- 
+
 .project-types .icon {
   display: block;
   font-size: 1.6rem;
@@ -670,14 +670,14 @@ body {
   transition: all 0.3s ease;
 }
 
- 
+
 .project-types input:checked + label {
   background: #1a1a1a;
   color: #ccc;
   border-color: #ffb400;
 }
 
- 
+
 .project-types input:checked + label::before {
   content: "✓";
   position: absolute;
@@ -690,7 +690,7 @@ body {
   animation: fadeIn 0.25s ease forwards;
 }
 
- 
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -702,7 +702,7 @@ body {
   }
 }
 
- 
+
 .project-types span,
 .project-types label,
 .project-types input {
@@ -720,7 +720,7 @@ body {
   text-shadow: none !important;
 }
 
- 
+
 .send-btn {
   margin: 25px auto 10px;
   display: block;
@@ -747,60 +747,65 @@ body {
 
 </style>
 
+
 <script>
-const TOKEN = "8573583660:AAEbX2SLC8XxJPKoZ8rEZ9bL_yBcBRQ8uTo";
-const CHAT_ID = "-1002608227308"; 
-const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+let TOKEN, CHAT_ID;
+
+
+fetch("/config.env")
+  .then(res => res.text())
+  .then(data => {
+    data.split("\n").forEach(line => {
+      const [key, value] = line.split("=");
+      if (key && value) {
+        if (key.trim() === "TELEGRAM_BOT_TOKEN") TOKEN = value.trim();
+        if (key.trim() === "TELEGRAM_CHAT_ID") CHAT_ID = value.trim();
+      }
+    });
+  })
+  .catch(err => console.error("⚠️ Не удалось загрузить config.env:", err));
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".project-form");
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(form);
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const company = formData.get("company");
-    const contact = formData.get("contact");
-    const message = formData.get("message");
+   
+    if (!TOKEN || !CHAT_ID) {
+      console.error("⚠️ Telegram config not loaded yet");
+      return;
+    }
 
-    const projectTypes = [...document.querySelectorAll(".project-types input:checked")]
-      .map(el => el.nextElementSibling.textContent.trim())
-      .join(", ") || "Not selected";
+    const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+    const formData = new FormData(form);
 
     const text = `
-<b>New Project Request</b>
+<b>Project</b>
 
-<b>Name:</b> ${name}
-<b>Email:</b> ${email}
-<b>Company:</b> ${company || "—"}
-<b>Contact:</b> ${contact || "—"}
-
-<b>Project Type:</b> ${projectTypes}
-<b>Message:</b> ${message || "—"}
+<b>Name:</b> ${formData.get("name")}
+<b>Email:</b> ${formData.get("email")}
+<b>Company:</b> ${formData.get("company")}
+<b>Contact:</b> ${formData.get("contact")}
+<b>Message:</b> ${formData.get("message")}
 `;
 
     try {
       await fetch(URL_API, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text,
-          parse_mode: "HTML"
-        }),
+        body: JSON.stringify({ chat_id: CHAT_ID, text, parse_mode: "HTML" }),
       });
 
-      
       window.location.reload();
-    } catch (error) {
-      console.error("Telegram error:", error);
-      
-      window.location.reload();
+    } catch (err) {
+      console.error("error:", err);
     }
   });
 });
 </script>
+
 
 </script>
 
