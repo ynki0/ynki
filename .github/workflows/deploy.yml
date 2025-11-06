@@ -1,4 +1,4 @@
-name: Deploy Hugo site with Telegram config
+name: Deploy static site with Telegram config
 
 on:
   push:
@@ -17,20 +17,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "0.121.0"
-
-      - name: Build Hugo site
-        run: hugo --minify
-
       - name: Create config.js with Telegram secrets
         run: |
           mkdir -p ./public/js
           echo "window.TELEGRAM_BOT_TOKEN='${{ secrets.TELEGRAM_BOT_TOKEN }}';" > ./public/js/config.js
           echo "window.TELEGRAM_CHAT_ID='${{ secrets.TELEGRAM_CHAT_ID }}';" >> ./public/js/config.js
-          echo "✅ Created config.js with Telegram secrets"
+          echo "✅ config.js created successfully."
+
+      - name: Copy site files
+        run: |
+          mkdir -p ./public
+          cp -r ./* ./public || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
