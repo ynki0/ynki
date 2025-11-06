@@ -30,6 +30,13 @@
 
 <body>
 
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+
+
 <style>
 
 .header, .header + .container.wrapper, .header + main, body > .container.wrapper {
@@ -257,6 +264,66 @@ Start via project games on <strong>KD Box / AI Aimbot</strong>. (think it will b
 
   </div>
 </div>
+
+
+<section id="contact">
+  <h2>Let's Build</h2>
+
+  <form class="project-form">
+    <label>Name*</label>
+    <input type="text" name="name" placeholder="Your name" required>
+
+    <label>Email*</label>
+    <input type="email" name="email" placeholder="you@example.com" required>
+
+    <label>Company</label>
+    <input type="text" name="company" placeholder="Your company (optional)">
+
+    <label>Your Contact</label>
+    <input type="text" name="contact" placeholder="@telegram / Discord">
+
+    <label>Message</label>
+    <textarea name="message" placeholder="Describe your project"></textarea>
+
+    <label>Select Project Type</label>
+ <div class="project-types">
+  <input type="checkbox" id="uxui" name="project-type">
+  <label for="uxui">
+    <i class="icon fa fa-globe"></i>
+    UX/UI Design
+  </label>
+
+  <input type="checkbox" id="web" name="project-type">
+  <label for="web">
+    <i class="icon fa fa-code"></i>
+    Web App
+  </label>
+
+  <input type="checkbox" id="mobile" name="project-type">
+  <label for="mobile">
+    <i class="icon fa fa-mobile"></i>
+    Mobile App
+  </label>
+
+  <input type="checkbox" id="desktop" name="project-type">
+  <label for="desktop">
+    <i class="icon fa fa-desktop"></i>
+    Desktop App
+  </label>
+
+  <input type="checkbox" id="api" name="project-type">
+  <label for="api">
+    <i class="icon fa fa-cogs"></i>
+    API Dev
+  </label>
+</div>
+
+
+    <button type="submit" class="send-btn">SEND</button>
+  </form>
+</section>
+
+
 
 <footer style="margin-top: 3rem; padding: 2rem 0; text-align: center; font-size: 0.9rem; color: #888; border-top: 1px solid #222;">
   <p style="margin: 0.2rem 0;">Everything written here was tested by time and fire. © 2025 Сopyright  ynki</p>
@@ -492,9 +559,251 @@ body {
   50% { transform: translateY(-2px); }
 }
 
+<style>
+
+ 
+#contact {
+  max-width: 520px;
+  margin: 80px auto;
+  padding: 40px 46px;
+  background: linear-gradient(180deg, #0f0f0f, #151515);
+  border-radius: 14px;
+  color: #ddd;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+ 
+#contact h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+ 
+.project-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 340px;
+}
+
+.project-form label {
+  font-size: 0.85rem;
+  color: #aaa;
+  text-align: left;
+  width: 100%;
+}
+
+.project-form input,
+.project-form textarea {
+  width: 100%;
+  height: 36px;
+  background: #111;
+  color: #eee;
+  border: 1px solid #2c2c2c;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.project-form textarea {
+  height: 70px;
+  resize: none;
+}
+
+.project-form input:focus,
+.project-form textarea:focus {
+  border-color: #ffb400;
+}
+
+ 
+.project-types {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+  width: 100%;
+}
+
+ 
+.project-types label {
+  position: relative;  
+  background: #1a1a1a;
+  color: #ccc;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 18px 0 10px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: center;
+  overflow: hidden;
+  user-select: none;
+  width: 130px;  
+}
+
+.project-types label:hover {
+  border-color: #ffb400;
+  color: #fff;
+}
+
+.project-types input {
+  display: none;
+}
+
+ 
+.project-types .icon {
+  display: block;
+  font-size: 1.6rem;
+  color: #777;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+ 
+.project-types input:checked + label {
+  background: #1a1a1a;
+  color: #ccc;
+  border-color: #ffb400;
+}
+
+ 
+.project-types input:checked + label::before {
+  content: "✓";
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  color: #ffb400;
+  font-weight: bold;
+  font-size: 0.9rem;
+  opacity: 0;
+  animation: fadeIn 0.25s ease forwards;
+}
+
+ 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+ 
+.project-types span,
+.project-types label,
+.project-types input {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.project-types label:focus,
+.project-types label:active {
+  outline: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+ 
+.send-btn {
+  margin: 25px auto 10px;
+  display: block;
+  background: linear-gradient(90deg, #ffb400, #ffcc33);
+  color: #111;
+  border: none;
+  width: 140px;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.send-btn:hover {
+  background: linear-gradient(90deg, #ffd766, #ffb400);
+  transform: translateY(-2px);
+}
+
 
 
 </style>
+
+<script>
+const TOKEN = "8573583660:AAEbX2SLC8XxJPKoZ8rEZ9bL_yBcBRQ8uTo";
+const CHAT_ID = "-1002608227308"; 
+const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".project-form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const company = formData.get("company");
+    const contact = formData.get("contact");
+    const message = formData.get("message");
+
+    const projectTypes = [...document.querySelectorAll(".project-types input:checked")]
+      .map(el => el.nextElementSibling.textContent.trim())
+      .join(", ") || "Not selected";
+
+    const text = `
+<b>New Project Request</b>
+
+<b>Name:</b> ${name}
+<b>Email:</b> ${email}
+<b>Company:</b> ${company || "—"}
+<b>Contact:</b> ${contact || "—"}
+
+<b>Project Type:</b> ${projectTypes}
+<b>Message:</b> ${message || "—"}
+`;
+
+    try {
+      await fetch(URL_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text,
+          parse_mode: "HTML"
+        }),
+      });
+
+      
+      window.location.reload();
+    } catch (error) {
+      console.error("Telegram error:", error);
+      
+      window.location.reload();
+    }
+  });
+});
+</script>
+
+</script>
+
 
 
 
