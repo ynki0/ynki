@@ -748,29 +748,29 @@ body {
 </style>
 
 
-  <script src="/js/config.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const form = document.querySelector(".project-form");
+  const sendBtn = form.querySelector(".send-btn");
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const form = document.querySelector(".project-form");
 
-      form.addEventListener("submit", async (e) => {
-        e.preventDefault();
+  try {
+    await import("/js/config.js");
+  } catch {
+    console.error("Не удалось загрузить /js/config.js");
+    return;
+  }
 
-       
-        const TOKEN = window.TELEGRAM_BOT_TOKEN;
-        const CHAT_ID = window.TELEGRAM_CHAT_ID;
+  const TOKEN = window.TELEGRAM_BOT_TOKEN;
+  const CHAT_ID = window.TELEGRAM_CHAT_ID;
+  const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
-        if (!TOKEN || !CHAT_ID) {
-          console.error("⚠️ Telegram config not loaded");
-          return;
-        }
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-        const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-        const formData = new FormData(form);
-
-        const text = `
-<b>New Project</b>
+    const formData = new FormData(form);
+    const text = `
+<b>Project</b>
 
 <b>Name:</b> ${formData.get("name")}
 <b>Email:</b> ${formData.get("email")}
@@ -779,25 +779,26 @@ body {
 <b>Message:</b> ${formData.get("message")}
 `;
 
-        try {
-          await fetch(URL_API, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              chat_id: CHAT_ID,
-              text,
-              parse_mode: "HTML",
-            }),
-          });
+    sendBtn.disabled = true;
+    sendBtn.textContent = "Sending...";
 
-     
-          window.location.reload();
-        } catch (err) {
-          console.error("Error:", err);
-        }
+    try {
+      await fetch(URL_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: CHAT_ID, text, parse_mode: "HTML" }),
       });
-    });
-  </script>
+
+      window.location.reload(); 
+
+    } catch (err) {
+      console.error("Error sending message:", err);
+      sendBtn.disabled = false;
+      sendBtn.textContent = "SEND";
+    }
+  });
+});
+</script>
 
 
 
