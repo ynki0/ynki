@@ -749,12 +749,18 @@ body {
 
 
 <script>
-let TOKEN, CHAT_ID;
+document.addEventListener("DOMContentLoaded", async () => {
+  const form = document.querySelector(".project-form");
+  const sendBtn = form.querySelector(".send-btn");
 
+  let TOKEN = null;
+  let CHAT_ID = null;
 
-fetch("/config.env")
-  .then(res => res.text())
-  .then(data => {
+ 
+  try {
+    const res = await fetch("/config.env");
+    const data = await res.text();
+
     data.split("\n").forEach(line => {
       const [key, value] = line.split("=");
       if (key && value) {
@@ -762,19 +768,19 @@ fetch("/config.env")
         if (key.trim() === "TELEGRAM_CHAT_ID") CHAT_ID = value.trim();
       }
     });
-  })
-  .catch(err => console.error("⚠️ Не удалось загрузить config.env:", err));
 
+    console.log("✅ Config loaded");
+  } catch (err) {
+    console.error("⚠️ config.env:", err);
+  }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector(".project-form");
-
+ 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-   
+    
     if (!TOKEN || !CHAT_ID) {
-      console.error("⚠️ Telegram config not loaded yet");
+      alert("Ошибка: Telegram config не загружен");
       return;
     }
 
@@ -791,23 +797,34 @@ document.addEventListener("DOMContentLoaded", () => {
 <b>Message:</b> ${formData.get("message")}
 `;
 
+ 
+    sendBtn.disabled = true;
+    sendBtn.textContent = "Sending...";
+
     try {
       await fetch(URL_API, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ chat_id: CHAT_ID, text, parse_mode: "HTML" }),
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text,
+          parse_mode: "HTML"
+        }),
       });
 
+      
       window.location.reload();
+
     } catch (err) {
-      console.error("error:", err);
+      console.error("Error:", err);
+      sendBtn.disabled = false;
+      sendBtn.textContent = "SEND";
     }
   });
 });
 </script>
 
 
-</script>
 
 
 
