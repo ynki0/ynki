@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Categories - Ynki blog</title><link rel="icon" type="image/png" href=icons/myicon.png /><meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/index.xml" title="Ynki blog" />
-	<meta property="og:url" content="http://localhost:1313/categories/">
+	<link rel="alternate" type="application/rss+xml" href="https://ynki.website/categories/index.xml" title="Ynki blog" />
+	<meta property="og:url" content="https://ynki.website/categories/">
   <meta property="og:site_name" content="Ynki blog">
   <meta property="og:title" content="Categories">
   <meta property="og:locale" content="en_us">
@@ -14,16 +14,16 @@
   <meta name="twitter:title" content="Categories">
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/custom.css" />
-	<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/dark.css"  />
-	<link rel="stylesheet" type="text/css" href="http://localhost:1313/css/custom-dark.css"  />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ynki.website/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ynki.website/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://ynki.website/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="https://ynki.website/css/dark.css"  />
+	<link rel="stylesheet" type="text/css" href="https://ynki.website/css/custom-dark.css"  />
 
 	
-	<script src="http://localhost:1313/js/main.js"></script>
-	<script src="http://localhost:1313/js/abc.js"></script>
-	<script src="http://localhost:1313/js/xyz.js"></script>
+	<script src="https://ynki.website/js/main.js"></script>
+	<script src="https://ynki.website/js/abc.js"></script>
+	<script src="https://ynki.website/js/xyz.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
@@ -31,8 +31,8 @@
 <body>
 	<div class="container wrapper tags">
 		<div class="header">
-	<base href="http://localhost:1313/">
-	<h1 class="site-title"><a href="http://localhost:1313/">Ynki blog</a></h1>
+	<base href="https://ynki.website/">
+	<h1 class="site-title"><a href="https://ynki.website/">Ynki blog</a></h1>
 	<div class="site-description"><h2>In the darkness of bugs, I forge clarity.</h2><nav class="nav social">
 			<ul class="flat"></ul>
 		</nav>
@@ -78,83 +78,39 @@
  
 
 
-<div id="music-btn" class="music-btn" aria-label="Play music" title="Play music">
-  <svg class="music-icon" viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M9 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6-13v9.5a3.5 3.5 0 1 0 2 3.5V7.5l4-.9V4l-6 1z"
-          fill="currentColor"/>
+<div id="music-btn" title="Play music">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M9 19a2 2 0 1 1-2-2 2 2 0 0 1 2 2zm8-13v10.18A3 3 0 1 1 15 19V8h-4V5h6z"/>
   </svg>
+  <audio id="bg-music" loop>
+    <source src="/music/theme.mp3" type="audio/mpeg">
+  </audio>
 </div>
-<audio id="bg-music" src="/music/song.mp3" preload="none" loop></audio>
 
 <script>
-  (function(){
-    const btn = document.getElementById('music-btn');
-    const audio = document.getElementById('bg-music');
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("music-btn");
+  const audio = document.getElementById("bg-music");
+  let playing = false;
 
-    btn.addEventListener('click', async () => {
-      try {
-        if (audio.paused) {
-          await audio.play();
-          btn.dataset.playing = 'true';
-        } else {
-          audio.pause();
-          btn.dataset.playing = 'false';
-        }
-      } catch (e) { console.warn(e); }
-    });
-  })();
-</script>
-
-<script>
-(function () {
-  const els = document.querySelectorAll('.tw');
-  if (!els.length) return;
-
-  function type(el, text, i = 0) {
-    if (i === 0) {
-      
-      el.dataset.full = text;
-      el.textContent = '';
-      el.classList.add('tw-on');
-    }
-    if (i >= text.length) return; 
-
-    el.textContent += text[i];
-    const base = Number(el.dataset.speed || 18);    
-    const jitter = 30;                               
-    const delay = base + Math.random() * jitter;
-    setTimeout(() => type(el, text, i + 1), delay);
-  }
-
-  els.forEach((el, idx) => {
-    const text = (el.textContent || '').replace(/\s+\n/g, '\n');
   
-    setTimeout(() => type(el, text), 200 * idx);
+  audio.volume = 0.25;
+
+  btn.addEventListener("click", () => {
+    if (!playing) {
+      audio.play();
+      btn.classList.add("playing");
+      btn.title = "Pause music";
+    } else {
+      audio.pause();
+      btn.classList.remove("playing");
+      btn.title = "Play music";
+    }
+    playing = !playing;
   });
-})();
+});
 </script>
 
-<script>
-(function(){
-  const els = document.querySelectorAll('.typed-text');
-  if (!els.length) return;
-
-  function type(el, text, i = 0) {
-    if (i === 0) el.textContent = '';
-    if (i >= text.length) return;
-    el.textContent += text[i];
-    const delay = 30 + Math.random()*40;
-    setTimeout(()=>type(el, text, i+1), delay);
-  }
-
-  els.forEach((el, idx)=>{
-    const txt = el.dataset.text || '';
-    if (!txt) return;
-   
-    setTimeout(()=>type(el, txt), 400 * idx + 800);
-  });
-})();
-</script>
 
 
 </footer>

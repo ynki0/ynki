@@ -1,39 +1,46 @@
-.music-btn {
+#music-btn {
   position: fixed;
-  right: 25px;
-  bottom: 25px;
-  width: 50px;
-  height: 50px;
+  bottom: 22px;
+  right: 22px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: 2px solid #ff5f8f;          
-  display: grid;
-  place-items: center;
+  background: rgba(255, 215, 0, 0.12);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  transition: all 0.25s ease;
   z-index: 9999;
-  background: transparent;
-  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  backdrop-filter: blur(6px);
 }
 
-.music-btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 8px rgba(255,95,143,.5);
+#music-btn:hover {
+  background: rgba(255, 215, 0, 0.25);
+  transform: scale(1.05);
 }
 
-.music-btn .music-icon {
-  width: 24px;
-  height: 24px;
-  color: #a16eff;  
-  transition: color .3s ease;
+#music-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: gold;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
 }
 
-.music-btn[data-playing="true"] {
-  border-color: #a16eff;
-  box-shadow: 0 0 10px rgba(161,110,255,.5);
+
+#music-btn.playing svg {
+  animation: pulse 1.5s infinite ease-in-out;
+  fill: #ffcc33;
 }
 
-.music-btn[data-playing="true"] .music-icon {
-  color: #ff5f8f;
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.1); opacity: 1; }
 }
+
+
 
 
 .typed-container {
