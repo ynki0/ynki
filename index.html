@@ -772,11 +772,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-    const checkedTypes = [...form.querySelectorAll("input[name='project-type']:checked")]
-    .map(input => input.value);
 
+    const checkedTypes = [...form.querySelectorAll("input[name='project-type']:checked")]
+      .map(input => input.value);
 
     data.projectTypes = checkedTypes;
+
+    if (data.projectTypes && data.projectTypes.length > 0) {
+      const formattedTypes = data.projectTypes.map(type => `- ${type}`).join("\n");
+      if (data.message && data.message.trim().length > 0) {
+        data.message += `\n\nSelected Types:\n${formattedTypes}`;
+      } else {
+        data.message = `—\n\nSelected Types:\n${formattedTypes}`;
+      }
+    } else if (!data.message || data.message.trim() === "") {
+      data.message = "—";
+    }
 
     try {
       await fetch("https://round-snowflake-e0ee.teslo-7026.workers.dev/", {
@@ -786,7 +797,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       window.location.reload();
-
     } catch (err) {
       console.error("Error sending message:", err);
       sendBtn.disabled = false;
@@ -794,9 +804,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-
 </script>
+
 
 
 
