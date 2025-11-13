@@ -341,37 +341,37 @@ Start via project games on <strong>KD Box / AI Aimbot</strong>. (think it will b
 
     <label>Select Project Type</label>
  <div class="project-types">
-  <input type="checkbox" id="uxui" name="project-type">
+  <input type="checkbox" id="uxui" name="project-type" value="UX/UI Design">
   <label for="uxui">
     <i class="icon fa fa-globe"></i>
     UX/UI Design
   </label>
 
-  <input type="checkbox" id="web" name="project-type">
+  <input type="checkbox" id="web" name="project-type" value="Web app">
   <label for="web">
     <i class="icon fa fa-code"></i>
     Web App
   </label>
 
-  <input type="checkbox" id="mobile" name="project-type">
+  <input type="checkbox" id="mobile" name="project-type" value="Mobile App">
   <label for="mobile">
     <i class="icon fa fa-mobile"></i>
     Mobile App
   </label>
 
-  <input type="checkbox" id="desktop" name="project-type">
+  <input type="checkbox" id="desktop" name="project-type" value="Desktop App">
   <label for="desktop">
     <i class="icon fa fa-desktop"></i>
     Desktop App
   </label>
 
-  <input type="checkbox" id="api" name="project-type">
+  <input type="checkbox" id="api" name="project-type" value="API Dev">
   <label for="api">
     <i class="icon fa fa-cogs"></i>
     API Dev
   </label>
   
-  <input type="checkbox" id="scriptbot" name="project-type">
+  <input type="checkbox" id="scriptbot" name="project-type" value="Script/Bot">
 <label for="scriptbot">
   <i class="icon fa fa-robot"></i>
   Script / Bot
@@ -773,8 +773,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
     const checkedTypes = [...form.querySelectorAll("input[name='project-type']:checked")]
-      .map(input => input.nextElementSibling?.textContent?.trim())
-      .filter(Boolean);
+    .map(input => input.value);
+
 
     data.projectTypes = checkedTypes;
 
