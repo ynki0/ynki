@@ -772,9 +772,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
+    const checkedTypes = [...form.querySelectorAll("input[name='project-type']:checked")]
+      .map(input => input.nextElementSibling?.textContent?.trim())
+      .filter(Boolean);
+
+    data.projectTypes = checkedTypes;
 
     try {
- 
       await fetch("https://round-snowflake-e0ee.teslo-7026.workers.dev/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -790,6 +794,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
 </script>
 
 
