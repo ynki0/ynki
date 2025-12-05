@@ -1438,24 +1438,37 @@
 
 			strip.style.willChange = 'transform';
 
+			function mod(n, m){ if(m === 0) return 0; return ((n % m) + m) % m; }
 			function render(){
 				
 				let display = x + manualOffset;
 				
 				if(origWidth > 0){
-					display = display % origWidth;
-					if(display < 0) display += origWidth;
+					display = mod(display, origWidth);
 				}
+				
 				strip.style.transform = `translate3d(${-display}px,0,0)`;
 			}
 
 			function step(ts){
 				if(!lastTs) lastTs = ts;
-				const dt = (ts - lastTs) / 1000; lastTs = ts;
+				let dt = (ts - lastTs) / 1000; lastTs = ts;
+				
+				if(dt > 0.05) dt = 0.05;
+				
+				const currentStripWidth = strip.scrollWidth / 2 || origWidth;
+				if(Math.abs(currentStripWidth - origWidth) > 0.5){
+					
+					const oldOrig = origWidth;
+					const displayNow = oldOrig > 0 ? mod(x + manualOffset, oldOrig) : (x + manualOffset);
+					origWidth = currentStripWidth;
+					
+					x = origWidth > 0 ? mod(displayNow, origWidth) : displayNow;
+				}
 				
 				x += speed * dt;
 				
-				if(origWidth > 0 && x >= origWidth) x -= origWidth * Math.floor(x / origWidth);
+				if(origWidth > 0) x = mod(x, origWidth);
 				render();
 				rafId = requestAnimationFrame(step);
 			}
@@ -1484,6 +1497,7 @@
 				try{ strip.releasePointerCapture && strip.releasePointerCapture(e.pointerId); }catch(_){ }
 				
 				x += manualOffset;
+				if(origWidth > 0) x = mod(x, origWidth);
 				manualOffset = 0;
 			}, {passive:true});
 
