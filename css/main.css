@@ -222,6 +222,79 @@ pre code {
     font-size: 1.125rem;
 }
 
+/* Force Font Awesome and site icon elements to neutral gray */
+.icon, .fa, .fas, .far, .fab {
+    color: #9aa0a6 !important;
+}
+
+/* Make small status dots neutral gray by default (override colored classes if desired) */
+.dot, .dot.green, .dot.yellow, .dot.blue {
+    background: #9aa0a6 !important;
+}
+
+/* Project type buttons (contact form) -------------------------------------------------
+   The design: a 3-column grid of dark rounded tiles. Each tile centers an icon above
+   a short label. Icons and text are neutral gray. Inputs are visually hidden but
+   accessible; checked state shows a subtle highlight. Matches the second screenshot.
+*/
+/* Project type buttons (contact form) -------------------------------------------------
+   The design: a 3-column grid of dark rounded tiles. Each tile centers an icon above
+   a short label. Icons and text are neutral gray. Use the site's soft purple accent
+   for borders and selected state (rgba(83,1,72)).
+*/
+.project-types{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0.8rem;
+    margin-top:0.6rem;
+}
+.project-types input{ /* keep the checkbox functional but visually hidden */
+    position:absolute!important;clip:rect(1px,1px,1px,1px);height:1px;width:1px;overflow:hidden;border:0;padding:0;margin:-1px
+}
+.project-types label{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:0.45rem;
+    background:rgba(255,255,255,0.02);
+    /* subtle purple-tinted border by default */
+    border:1px solid rgba(83,1,72,0.06);
+    color:#9aa0a6 !important;
+    padding:0.75rem 0.5rem;
+    border-radius:10px;
+    text-align:center;
+    font-size:0.9rem;
+    min-height:56px;
+    cursor:pointer;
+    transition:all 120ms ease;
+    box-shadow:0 6px 18px rgba(6,8,14,0.35);
+}
+.project-types label .icon,
+.project-types label i.icon,
+.project-types .icon{
+    color:#9aa0a6 !important;
+    font-size:1.25rem !important; /* slightly larger icon */
+    line-height:1;
+}
+.project-types label:hover{
+    transform:translateY(-2px);
+    border-color:rgba(83,1,72,0.12);
+}
+.project-types input:checked + label{
+    border-color:rgba(83,1,72,0.9);
+    box-shadow:0 10px 30px rgba(83,1,72,0.08);
+    background:linear-gradient(180deg, rgba(255,255,255,0.012), rgba(255,255,255,0.01));
+}
+.project-types label .icon + span{ /* if label has extra span, keep spacing */
+    margin-top:0.2rem;
+}
+
+/* Make sure the general icon class remains neutral gray everywhere */
+.icon, .fa, .fas, .far, .fab {
+    color: #9aa0a6 !important;
+}
+
 .header nav {
     margin-top: 20px;
     border-top: 1px solid #f4f4f4;
