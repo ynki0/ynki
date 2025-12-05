@@ -87,6 +87,120 @@
   .project-types label:hover { border-color: rgba(83,1,72,0.12) !important; color: #fff !important }
   .project-types input:checked + label { border-color: rgba(83,1,72,0.9) !important; box-shadow:0 8px 24px rgba(83,1,72,0.08) !important; }
   .project-types input:checked + label::before { color: rgba(83,1,72,0.95) !important; }
+
+   
+  #contact {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 3rem 1.25rem;
+    background: linear-gradient(180deg, rgba(0,0,0,0.94), rgba(0,0,0,0.94));
+    border: 1px solid rgba(83,1,72,0.12);
+    border-radius: 16px;
+    box-shadow: 0 18px 60px rgba(83,1,72,0.18), 0 0 40px rgba(100,20,95,0.04) inset;
+  }
+
+  #contact h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 0 0 2rem 0;
+    text-align: center;
+  }
+
+  .project-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .project-form label {
+    display: block;
+    color: #bfcfe0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  .project-form input[type="text"],
+  .project-form input[type="email"],
+  .project-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(83, 1, 72, 0.3);
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+  }
+
+  .project-form input:focus,
+  .project-form textarea:focus {
+    outline: none;
+    border-color: rgba(83, 1, 72, 0.8);
+    box-shadow: 0 0 12px rgba(83, 1, 72, 0.15);
+  }
+
+  .project-form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .project-types {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .project-types input[type="checkbox"] {
+    display: none;
+  }
+
+  .project-types label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(83, 1, 72, 0.15);
+    border-radius: 8px;
+    color: #9aa0a6;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+  }
+
+  .project-types label:hover {
+    border-color: rgba(83, 1, 72, 0.4);
+    background: rgba(83, 1, 72, 0.05);
+  }
+
+  .project-types input:checked + label {
+    background: rgba(233, 0, 245, 0.1);
+    border-color: rgba(233, 0, 245, 0.6);
+    color: #e900f5;
+  }
+
+  .project-types .icon {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 700px) {
+    #contact {
+      padding: 2rem 1rem;
+      margin: 2rem 0;
+    }
+    #contact h2 {
+      font-size: 1.4rem;
+    }
+    .project-types {
+      grid-template-columns: 1fr;
+    }
+  }
   </style>
 
 
@@ -292,7 +406,7 @@
   .ps-box h4{font-size:0.78rem;color:#e6eefb;margin:0 0 0.5rem 0;letter-spacing:1px}
   .ps-box ul{margin:0;padding:0;list-style:none;font-size:0.9rem}
   .ps-box ul li{padding:0.18rem 0;color:#cbdbe8}
-  .ps-box .muted{font-size:0.8rem;color:#93a0b8}
+  .ps-box .muted{font-size:0.8rem;color:#93a0b8;border:1px solid rgba(255, 100, 252, 0.245);border-radius:6px;padding:0.4rem 0.6rem;display:inline-block;margin-top:0.2rem}
 
    
   .ps-box.highlight{position:relative}
@@ -662,16 +776,18 @@
 	</div>
 
 	<style>
-	.services-widget{padding:2.2rem 1.25rem; width:100vw; margin-left:calc(50% - 50vw); box-sizing:border-box}
-	.services-widget .widget-inner{max-width:1200px;margin:0 auto;padding:1.6rem;border-radius:16px;background:linear-gradient(180deg, rgba(0,0,0,0.94), rgba(0,0,0,0.94));border:1px solid rgba(83,1,72,0.12);box-shadow:0 18px 60px rgba(83,1,72,0.18), 0 0 40px rgba(100,20,95,0.04) inset}
+	.services-widget{padding:2.2rem 0; width:100vw; margin-left:calc(50% - 50vw); box-sizing:border-box}
+	.services-widget .widget-inner{max-width:100%;margin:0;padding:1.6rem 1.25rem;border-radius:0;background:linear-gradient(180deg, rgba(0,0,0,0.94), rgba(0,0,0,0.94));border:1px solid rgba(83,1,72,0.12);border-left:none;border-right:none;box-shadow:0 18px 60px rgba(83,1,72,0.18), 0 0 40px rgba(100,20,95,0.04) inset}
 
-	.services-head{max-width:920px;margin:0 auto 1.4rem;color:#e6eefb;text-align:center}
+	.services-head{max-width:none;margin:0 auto 1.4rem;color:#e6eefb;text-align:center;padding:0 1.25rem}
 	.services-head .eyebrow{font-size:0.85rem;color:#9fb0cf;letter-spacing:1px;margin-bottom:0.4rem;font-weight:700}
 	.services-title{font-size:1.8rem;margin:0 0 0.4rem 0}
 	.services-sub{color:#bfcfe0;margin:0 0 1rem}
 
-	.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-	.service-card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border-radius:10px;padding:1.4rem;border:1px solid rgba(255,255,255,0.03);color:#dbe9ff;min-height:220px;display:flex;flex-direction:column;gap:0.8rem;position:relative;box-shadow:0 8px 40px rgba(83,1,72,0.06)}
+	.services-grid{display:flex;flex-direction:row;gap:1rem;overflow-x:auto;overflow-y:hidden;padding:0 1.25rem 0.8rem 1.25rem;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;-ms-overflow-style:none;cursor:grab;width:100%;box-sizing:border-box}
+	.services-grid::-webkit-scrollbar{display:none}
+	.services-grid:active{cursor:grabbing}
+	.service-card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border-radius:10px;padding:1.4rem;border:1px solid rgba(255,255,255,0.03);color:#dbe9ff;min-height:220px;display:flex;flex-direction:column;gap:0.8rem;position:relative;box-shadow:0 8px 40px rgba(83,1,72,0.06);flex:0 0 calc(25% - 0.75rem);min-width:300px;scroll-snap-align:start}
 	.service-card:before{content:"";position:absolute;inset:-6px;border-radius:12px;padding:6px;background:linear-gradient(90deg, rgba(0,0,0,0.139), rgba(83,1,72,0.16));-webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);pointer-events:none}
 
 	.service-visual{height:100px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:transparent}
@@ -683,29 +799,31 @@
 	 
 
 	@media(max-width:1000px){
-		.services-grid{grid-template-columns:repeat(2,1fr)}
+		.services-grid{gap:0.9rem}
+		.service-card{flex:0 0 calc(50% - 0.45rem);min-width:240px}
 		.services-title{font-size:1.5rem}
 		.services-sub{font-size:0.9rem}
 	}
 	@media(max-width:700px){
-		.services-grid{grid-template-columns:repeat(2,1fr);gap:0.8rem}
-		.services-widget{padding:1.6rem 1rem}
-		.services-widget .widget-inner{padding:1rem}
-		.services-head{margin-bottom:1rem}
+		.services-grid{gap:0.8rem;padding:0 1rem 0.6rem 1rem}
+		.service-card{flex:0 0 calc(50% - 0.4rem);min-width:180px;padding:1rem;min-height:160px}
+		.services-widget{padding:1.6rem 0}
+		.services-widget .widget-inner{padding:1rem;border-radius:0}
+		.services-head{margin-bottom:1rem;padding:0 1rem}
 		.services-title{font-size:1.3rem}
 		.services-sub{font-size:0.85rem}
-		.service-card{padding:1rem;min-height:180px}
 		.service-visual i{font-size:36px}
 		.service-card h3{font-size:0.95rem}
 		.service-card p{font-size:0.85rem}
 	}
 	@media(max-width:600px){
-		.services-grid{grid-template-columns:1fr}
-		.services-widget{padding:1.2rem 0.8rem}
-		.services-widget .widget-inner{padding:0.8rem;border-radius:12px}
+		.services-grid{gap:0.7rem;padding:0 0.8rem 0.6rem 0.8rem}
+		.service-card{flex:0 0 100%;min-width:auto;padding:0.8rem;min-height:auto;gap:0.6rem}
+		.services-widget{padding:1.2rem 0}
+		.services-widget .widget-inner{padding:0.8rem;border-radius:0}
+		.services-head{padding:0 0.8rem}
 		.services-title{font-size:1.1rem}
 		.services-sub{font-size:0.8rem;margin-bottom:0.6rem}
-		.service-card{padding:0.8rem;min-height:auto;gap:0.6rem}
 		.service-visual i{font-size:32px}
 		.service-card h3{font-size:0.9rem}
 		.service-card p{font-size:0.78rem;line-height:1.25}
@@ -875,6 +993,41 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  
+  function initServicesCarousel() {
+    const grid = document.querySelector('.services-grid');
+    if (!grid) return;
+
+    let scrollDirection = 1;
+
+    function autoScroll() {
+      const maxScroll = grid.scrollWidth - grid.clientWidth;
+      
+      if (maxScroll <= 0) return; 
+
+      const currentScroll = grid.scrollLeft;
+
+      
+      if (currentScroll >= maxScroll - 10) {
+        scrollDirection = -1;
+      } else if (currentScroll <= 10) {
+        scrollDirection = 1;
+      }
+
+      grid.scrollLeft += scrollDirection * 3;
+    }
+
+    
+    setInterval(autoScroll, 25);
+  }
+
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initServicesCarousel);
+  } else {
+    initServicesCarousel();
+  }
 });
 </script>
 

@@ -1,344 +1,42 @@
-/* home.css — для главной страницы */
+/* Dark background for entire site */
 body {
-  opacity: 0;
   background-color: #000;
-  animation: fadeInDark 2s ease-in-out forwards;
-  background: radial-gradient(circle at 50% 80px, rgba(255,255,255,0.05), transparent 70%) #000;
+  background-image: none;
+  color: #e6eefb;
 }
 
-@keyframes fadeInDark {
-  0% {
-    opacity: 0;
-    filter: brightness(0.2) blur(5px);
-  }
-  60% {
-    opacity: 0.8;
-    filter: brightness(0.6) blur(2px);
-  }
-  100% {
-    opacity: 1;
-    filter: brightness(1) blur(0);
-  }
+html {
+  background-color: #000;
 }
 
+/* Ensure container and wrapper have black background */
+.container,
+.wrapper {
+  background-color: #000;
+}
+
+/* Make sure posts section fits the theme */
 .posts-layout {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 2rem;
+  background-color: #000;
 }
 
 .posts-column {
-  flex: 1;
-  min-width: 0;
-  max-width: 650px;
-  z-index: 3;
-  position: relative;
+  background-color: transparent;
 }
 
-.side {
-  position: absolute;
-  width: 420px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.side.left {
-  left: -490px;
-  top: 345px;
-}
-
-.side.right {
-  right: -490px;
-  top: 260px;
-}
-
-.creature {
-  width: 380px;
-  height: auto;
-  display: block;
-  transition: transform 0.6s ease, filter 0.8s ease;
-}
-
-.breathe {
-  animation: breathe 7s ease-in-out infinite;
-  transform-origin: center center;
-}
-
-@keyframes breathe {
-  0%, 100% {
-    transform: scale(1) translateY(0);
-    filter: brightness(1);
-  }
-  50% {
-    transform: scale(1.03) translateY(-4px);
-    filter: brightness(1.1);
-  }
-}
-
-.dragon-img {
-  filter: brightness(0.9) contrast(1.1);
+.post {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(83, 1, 72, 0.12);
+  padding: 1.2rem;
+  border-radius: 8px;
   margin-bottom: 1rem;
 }
 
-.dragon-img:hover {
-  transform: scale(1.04);
-  filter: drop-shadow(0 0 40px rgba(180, 0, 0, 0.6)) brightness(1.2);
-}
-
-.dragon-text.glow-red {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #4b0000;
-  margin-top: 0;
-  text-shadow: 0 0 8px rgba(120, 0, 0, 0.4);
-  animation: textGlowRed 3.5s ease-in-out infinite;
-}
-
-@keyframes textGlowRed {
-  0%, 100% { opacity: 1; text-shadow: 0 0 12px rgba(180, 0, 0, 0.6); }
-  50% { opacity: 0.6; text-shadow: 0 0 6px rgba(100, 0, 0, 0.2); }
-}
-
-.knight-img {
-  width: 380px;
-  filter: brightness(1) contrast(1.1);
-  margin-bottom: 0.4rem;
-  animation: knightBreathe 7s ease-in-out infinite;
-}
-
-@keyframes knightBreathe {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-2px); }
-}
-
-.knight-img:hover {
-  transform: scale(1.04);
-  filter: drop-shadow(0 0 40px rgba(255,255,255,0.9)) brightness(1.25);
-}
-
-.knight-text.glow-gold {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #b0c4de;
-  margin-top: -6.5rem;
-  text-shadow: 0 0 8px rgba(80, 150, 255, 0.3);
-  animation: textGlowGold 3s ease-in-out infinite;
-  text-align: center;
-}
-
-@media (max-width: 1200px) {
-  .side.left, .side.right { display: none; }
-}
-
-@keyframes textGlowBlue {
-  0%, 100% { opacity: 1; text-shadow: 0 0 12px rgba(90, 160, 255, 0.6); }
-  50% { opacity: 0.7; text-shadow: 0 0 6px rgba(60, 120, 255, 0.3); }
-}
-
-@media (max-width: 1200px) {
-  .side.left, .side.right { display: none; }
-}
-
-body {
-  background: radial-gradient(circle at 50% 80px, rgba(255,255,255,0.05), transparent 70%) #000;
-}
-
-.knight-img {
-  animation: knightBreathe 7s ease-in-out infinite;
-}
-@keyframes knightBreathe {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-2px); }
-}
-
-<style>
-
-
-#contact {
-  max-width: 520px;
-  margin: 80px auto;
-  padding: 40px 46px;
-  background: linear-gradient(180deg, #0f0f0f, #151515);
-  border-radius: 14px;
-  color: #ddd;
-  font-family: "Inter", "Segoe UI", sans-serif;
-}
-
-
-#contact h2 {
-  text-align: center;
-  font-size: 1.6rem;
+.post .title {
+  color: #fff;
   font-weight: 600;
-  color: #fff;
-  margin-bottom: 30px;
-  letter-spacing: 0.5px;
 }
 
-
-.project-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  max-width: 340px;
+.post .description {
+  color: #bfcfe0;
 }
-
-.project-form label {
-  font-size: 0.85rem;
-  color: #aaa;
-  text-align: left;
-  width: 100%;
-}
-
-.project-form input,
-.project-form textarea {
-  width: 100%;
-  height: 36px;
-  background: #111;
-  color: #eee;
-  border: 1px solid #2c2c2c;
-  border-radius: 8px;
-  padding: 6px 10px;
-  font-size: 0.9rem;
-  outline: none;
-  transition: all 0.2s ease;
-}
-
-.project-form textarea {
-  height: 70px;
-  resize: none;
-}
-
-.project-form input:focus,
-.project-form textarea:focus {
-  border-color: #ffb400;
-}
-
-
-.project-types {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  justify-content: center;
-  margin-top: 15px;
-  width: 100%;
-}
-
-
-.project-types label {
-  position: relative; /* Важно: именно label теперь будет контейнером для галочки */
-  background: #1a1a1a;
-  color: #ccc;
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 18px 0 10px;
-  font-size: 0.82rem;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  text-align: center;
-  overflow: hidden;
-  user-select: none;
-  width: 130px; /* одинаковая ширина карточек */
-}
-
-.project-types label:hover {
-  border-color: #ffb400;
-  color: #fff;
-}
-
-.project-types input {
-  display: none;
-}
-
-
-.project-types .icon {
-  display: block;
-  font-size: 1.6rem;
-  color: #777;
-  margin-bottom: 8px;
-  transition: all 0.3s ease;
-}
-
-
-.project-types input:checked + label {
-  background: #1a1a1a;
-  color: #ccc;
-  border-color: #ffb400;
-}
-
-
-.project-types input:checked + label::before {
-  content: "✓";
-  position: absolute;
-  top: 6px;
-  right: 8px;
-  color: #ffb400;
-  font-weight: bold;
-  font-size: 0.9rem;
-  opacity: 0;
-  animation: fadeIn 0.25s ease forwards;
-}
-
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-
-.project-types span,
-.project-types label,
-.project-types input {
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-
-.project-types label:focus,
-.project-types label:active {
-  outline: none !important;
-  background: none !important;
-  box-shadow: none !important;
-  text-shadow: none !important;
-}
-
-
-.send-btn {
-  margin: 25px auto 10px;
-  display: block;
-  background: linear-gradient(90deg, #ffb400, #ffcc33);
-  color: #111;
-  border: none;
-  width: 140px;
-  padding: 10px 0;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.send-btn:hover {
-  background: linear-gradient(90deg, #ffd766, #ffb400);
-  transform: translateY(-2px);
-}
-
