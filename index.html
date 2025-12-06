@@ -1615,7 +1615,7 @@
 			<div class="why-us-card" role="listitem">
 				<div class="why-us-icon" aria-hidden="true"><i class="fa fa-star"></i></div>
 				<h3 data-i18n="whyus.card3.title">Client Success Stories</h3>
-				<p data-i18n="whyus.card3.desc">Join 100+ satisfied clients who trust us to deliver results.</p>
+				<p data-i18n="whyus.card3.desc">Join satisfied clients who trust us to deliver results.</p>
 			</div>
 
 			<div class="why-us-card" role="listitem">
@@ -1717,7 +1717,7 @@
 				"whyus.card2.title": "Seamless Integration",
 				"whyus.card2.desc": "Connect your systems effortlessly with robust APIs and smooth data flow.",
 				"whyus.card3.title": "Client Success Stories",
-				"whyus.card3.desc": "Join 100+ satisfied clients who trust us to deliver results.",
+				"whyus.card3.desc": "Join satisfied clients who trust us to deliver results.",
 				"whyus.card4.title": "Since 2018",
 				"whyus.card4.desc": "Working digital projects with a large audience that used the app every day."
 			},
@@ -1728,7 +1728,7 @@
 				"whyus.card2.title": "Беспрепятственная интеграция",
 				"whyus.card2.desc": "Подключайте системы без сложностей с помощью надёжных API и гладкого потока данных.",
 				"whyus.card3.title": "Истории успеха клиентов",
-				"whyus.card3.desc": "Присоединяйтесь к 100+ довольным клиентам, которые нам доверяют.",
+				"whyus.card3.desc": "Присоединяйтесь довольным клиентам, которые нам доверяют.",
 				"whyus.card4.title": "С 2018 года",
 				"whyus.card4.desc": "Рабочие цифровые проекты с большой аудиторией, которая использовала приложение каждый день."
 			}
@@ -1783,6 +1783,22 @@
     </div>
   </div>
 </div>
+
+    <style>
+      .radial-timeline-widget {
+        margin:4rem auto;width:100vw;margin-left:calc(50% - 50vw);padding:4rem 0;background:linear-gradient(135deg,rgba(5,5,15,0.8) 0%,rgba(10,8,20,0.9) 100%);
+      }
+      .timeline-title { font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#fff;font-size:2.2rem }
+      .orbital-container { position:relative;width:100%;max-width:1000px;margin:0 auto;aspect-ratio:1000/600 }
+      #orbitCanvas { width:100%;height:auto;display:block }
+      .timeline-tooltip { position:absolute;background:#1a1a2e;border:1px solid #f92672;padding:12px;border-radius:8px;color:#fff;font-size:0.85rem;z-index:100;pointer-events:none;opacity:0;transition:opacity 0.3s }
+      .timeline-tooltip.active { opacity:1 }
+      @media(max-width:1000px) { .radial-timeline-widget { margin:3rem auto;padding:3rem 0 } .timeline-title { font-size:1.8rem } #orbitCanvas { max-width:100% } }
+      @media(max-width:700px) { .radial-timeline-widget { margin:2rem auto;padding:2rem 0.8rem } .timeline-title { font-size:1.5rem;margin-bottom:2rem } .orbital-container { aspect-ratio:auto;max-width:100% } #orbitCanvas { max-height:400px } }
+      @media(max-width:480px) { .radial-timeline-widget { margin:1.5rem auto;padding:1.5rem 0.6rem } .timeline-title { font-size:1.2rem;margin-bottom:1.5rem } #orbitCanvas { max-height:300px } }
+    </style>
+  </div>
+</section>
 
 <section id="contact">
   <div class="contact-grid">
@@ -1915,6 +1931,7 @@
         </div>
       </form>
     </div>
+  </div>
   </div>
 </section>
 
@@ -2232,6 +2249,356 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener('DOMContentLoaded', initServicesCarousel);
   } else {
     initServicesCarousel();
+  }
+
+  
+  
+  
+  function initRadialTimeline() {
+    const canvas = document.getElementById('orbitCanvas');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    let animationId;
+
+    
+    const timelineData = [
+      { 
+        id: 1, 
+        label: 'Planning', 
+        icon: '📅',
+        angle: 0, 
+        status: 'completed', 
+        color: '#6B7280',
+        date: 'Jan 2024',
+        title: 'Planning',
+        description: 'Project planning and requirements gathering.',
+        energy: 100,
+        connected: ['Design'],
+        iconCode: 0xF133  
+      },
+      { 
+        id: 2, 
+        label: 'Design', 
+        icon: '📋',
+        angle: 72, 
+        status: 'completed', 
+        color: '#6B7280',
+        date: 'Feb 2024',
+        title: 'Design',
+        description: 'UI/UX design and system architecture.',
+        energy: 90,
+        connected: ['Planning', 'Development'],
+        iconCode: 0xF1BB  
+      },
+      { 
+        id: 3, 
+        label: 'Development', 
+        icon: '</>', 
+        angle: 144, 
+        status: 'in-progress', 
+        color: '#6B7280',
+        date: 'Mar 2024',
+        title: 'Development',
+        description: 'Core features implementation and testing.',
+        energy: 68,
+        connected: ['Design', 'Testing'],
+        iconCode: 0xF121  
+      },
+      { 
+        id: 4, 
+        label: 'Testing', 
+        icon: '👤',
+        angle: 216, 
+        status: 'pending', 
+        color: '#6B7280',
+        date: 'Apr 2024',
+        title: 'Testing',
+        description: 'User testing and bug fixes.',
+        energy: 38,
+        connected: ['Development', 'Release'],
+        iconCode: 0xF007  
+      },
+      { 
+        id: 5, 
+        label: 'Release', 
+        icon: '⏱️',
+        angle: 288, 
+        status: 'pending', 
+        color: '#6B7280',
+        date: 'May 2024',
+        title: 'Release',
+        description: 'Final deployment and release.',
+        energy: 16,
+        connected: ['Testing'],
+        iconCode: 0xF017  
+      }
+    ];
+
+    let rotation = 0;
+    let selectedNode = null;
+
+    
+    function resizeCanvas() {
+      const rect = canvas.parentElement.getBoundingClientRect();
+      canvas.width = Math.max(600, rect.width);
+      canvas.height = Math.max(400, canvas.width * 0.6);
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    
+    function rotatePoint(x, y, angle) {
+      const rad = (angle * Math.PI) / 180;
+      return {
+        x: x * Math.cos(rad) - y * Math.sin(rad),
+        y: x * Math.sin(rad) + y * Math.cos(rad)
+      };
+    }
+
+    
+    function drawCore() {
+      const cx = canvas.width / 2;
+      const cy = canvas.height / 2;
+      const pulseSize = 20 + Math.sin(rotation * 0.02) * 5;
+
+      
+      for (let i = 3; i > 0; i--) {
+        ctx.fillStyle = `rgba(99, 102, 241, ${0.15 / i})`;
+        ctx.beginPath();
+        ctx.arc(cx, cy, pulseSize + i * 15, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      
+      const gradient = ctx.createRadialGradient(cx, cy, 0, cx, cy, pulseSize);
+      gradient.addColorStop(0, '#93c5fd');
+      gradient.addColorStop(1, '#3b82f6');
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(cx, cy, pulseSize, 0, Math.PI * 2);
+      ctx.fill();
+
+      
+      ctx.strokeStyle = 'rgba(99, 102, 241, 0.6)';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.arc(cx, cy, pulseSize, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
+    
+    function drawOrbits() {
+      const cx = canvas.width / 2;
+      const cy = canvas.height / 2;
+      const radius = Math.min(canvas.width, canvas.height) * 0.3;
+
+      ctx.strokeStyle = 'rgba(100, 116, 139, 0.15)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
+    
+    function drawNodes() {
+      const cx = canvas.width / 2;
+      const cy = canvas.height / 2;
+      const radius = Math.min(canvas.width, canvas.height) * 0.3;
+
+      timelineData.forEach((node) => {
+        const currentAngle = (node.angle + rotation * 0.5) % 360;
+        const rotated = rotatePoint(radius, 0, currentAngle);
+        const x = cx + rotated.x;
+        const y = cy + rotated.y;
+
+        
+        ctx.fillStyle = 'rgba(100, 116, 139, 0.1)';
+        ctx.beginPath();
+        ctx.arc(x, y, 32, 0, Math.PI * 2);
+        ctx.fill();
+
+        
+        ctx.strokeStyle = 'rgba(100, 116, 139, 0.3)';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.arc(x, y, 28, 0, Math.PI * 2);
+        ctx.stroke();
+
+        
+        ctx.fillStyle = selectedNode === node.id ? '#FFF' : '#E5E7EB';
+        ctx.beginPath();
+        ctx.arc(x, y, 22, 0, Math.PI * 2);
+        ctx.fill();
+
+        
+        ctx.fillStyle = '#1F2937';
+        ctx.font = 'bold 24px Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        
+        
+        let iconChar = '';
+        if (node.label === 'Planning') iconChar = '📅';
+        else if (node.label === 'Design') iconChar = '📋';
+        else if (node.label === 'Development') iconChar = '</>';
+        else if (node.label === 'Testing') iconChar = '👤';
+        else if (node.label === 'Release') iconChar = '⏱️';
+        
+        ctx.fillText(iconChar, x, y);
+
+        
+        if (selectedNode === node.id) {
+          ctx.strokeStyle = '#FFF';
+          ctx.lineWidth = 3;
+          ctx.beginPath();
+          ctx.arc(x, y, 22, 0, Math.PI * 2);
+          ctx.stroke();
+        }
+
+        
+        node.screenX = x;
+        node.screenY = y;
+      });
+    }
+
+    
+    function drawLabels() {
+      const cx = canvas.width / 2;
+      const cy = canvas.height / 2;
+
+      ctx.fillStyle = '#888';
+      ctx.font = 'bold 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+      ctx.textAlign = 'center';
+
+      timelineData.forEach((node) => {
+        const labelY = cy + Math.min(canvas.width, canvas.height) * 0.4;
+        const offset = (node.id - 1) * (canvas.width / timelineData.length);
+
+        ctx.fillText(node.label, cx - canvas.width / 2 + 80 + offset, labelY);
+      });
+    }
+
+    
+    function animate() {
+      
+      ctx.fillStyle = 'transparent';
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      
+      drawOrbits();
+      drawCore();
+      drawNodes();
+      drawLabels();
+
+      rotation += 1;
+      animationId = requestAnimationFrame(animate);
+    }
+
+    
+    
+    function updateNodeDetails(nodeId) {
+      const detailsEl = document.getElementById('nodeDetails');
+      if (!nodeId) {
+        detailsEl.style.display = 'none';
+        return;
+      }
+      
+      const node = timelineData.find(n => n.id === nodeId);
+      if (!node) return;
+
+      document.getElementById('detailStatus').textContent = node.status.toUpperCase();
+      document.getElementById('detailStatus').style.borderColor = 'rgba(100,100,120,0.6)';
+      document.getElementById('detailStatus').style.color = '#ccc';
+      document.getElementById('detailDate').textContent = node.date;
+      document.getElementById('detailTitle').textContent = node.title;
+      document.getElementById('detailDescription').textContent = node.description;
+      document.getElementById('detailEnergy').textContent = node.energy + '%';
+      document.getElementById('detailEnergyBar').style.width = node.energy + '%';
+      document.getElementById('detailEnergyBar').style.background = `linear-gradient(90deg,#6366f1,#3b82f6)`;
+      
+      const connectedEl = document.getElementById('detailConnected');
+      connectedEl.innerHTML = node.connected.map(connectedName => {
+        const connectedNode = timelineData.find(n => n.label === connectedName);
+        return `<button class="connected-node-btn" data-node-id="${connectedNode?.id}" style="display:inline-block;padding:6px 12px;border:1px solid rgba(100,100,120,0.5);border-radius:8px;font-size:0.85rem;color:#aaa;background:rgba(100,100,120,0.05);font-weight:500;cursor:pointer;transition:all 0.2s;font-family:inherit">
+          ${connectedName} →
+        </button>`;
+      }).join('');
+      
+      
+      document.querySelectorAll('.connected-node-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const nodeId = parseInt(btn.getAttribute('data-node-id'));
+          if (nodeId) {
+            selectedNode = nodeId;
+            updateNodeDetails(nodeId);
+          }
+        });
+        
+        
+        btn.addEventListener('mouseenter', () => {
+          btn.style.background = 'rgba(99,102,241,0.15)';
+          btn.style.borderColor = 'rgba(99,102,241,0.6)';
+          btn.style.color = '#6366f1';
+        });
+        
+        btn.addEventListener('mouseleave', () => {
+          btn.style.background = 'rgba(100,100,120,0.05)';
+          btn.style.borderColor = 'rgba(100,100,120,0.5)';
+          btn.style.color = '#aaa';
+        });
+      });
+      
+      detailsEl.style.display = 'block';
+    }
+
+    canvas.addEventListener('click', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      timelineData.forEach((node) => {
+        const dx = x - node.screenX;
+        const dy = y - node.screenY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < 35) {
+          selectedNode = selectedNode === node.id ? null : node.id;
+          updateNodeDetails(selectedNode);
+        }
+      });
+    });
+
+    
+    canvas.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) {
+        const touch = e.touches[0];
+        const rect = canvas.getBoundingClientRect();
+        const x = touch.clientX - rect.left;
+        const y = touch.clientY - rect.top;
+
+        timelineData.forEach((node) => {
+          const dx = x - node.screenX;
+          const dy = y - node.screenY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 35) {
+            selectedNode = selectedNode === node.id ? null : node.id;
+            updateNodeDetails(selectedNode);
+          }
+        });
+      }
+    });
+
+    animate();
+  }
+
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRadialTimeline);
+  } else {
+    initRadialTimeline();
   }
 });
 </script>
