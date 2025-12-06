@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="generator" content="Hugo 0.128.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1315&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.128.0">
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Ynki - Development leading. </title><link rel="icon" type="image/png" href=icons/myicon.png /><meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="alternate" type="application/rss+xml" href="http://localhost:1315/index.xml" title="Ynki" />
-	<meta property="og:url" content="http://localhost:1315/">
+	<link rel="alternate" type="application/rss+xml" href="https://ynki.website/index.xml" title="Ynki" />
+	<meta property="og:url" content="https://ynki.website/">
   <meta property="og:site_name" content="Ynki">
   <meta property="og:title" content="Ynki">
   <meta property="og:description" content="Expert-level development that will guide your project from concept to completion. Transparent hourly rates, clearly defined stages and goals, a strong reputation on major forums, and reliable cooperation. Leading product launches since 2018 across multiple industries.">
@@ -22,16 +22,16 @@
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1315/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1315/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="http://localhost:1315/css/custom.css" />
-	<link rel="stylesheet" type="text/css" href="http://localhost:1315/css/dark.css"  />
-	<link rel="stylesheet" type="text/css" href="http://localhost:1315/css/custom-dark.css"  />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ynki.website/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://ynki.website/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="https://ynki.website/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="https://ynki.website/css/dark.css"  />
+	<link rel="stylesheet" type="text/css" href="https://ynki.website/css/custom-dark.css"  />
 
 	
-	<script src="http://localhost:1315/js/main.js"></script>
-	<script src="http://localhost:1315/js/abc.js"></script>
-	<script src="http://localhost:1315/js/xyz.js"></script>
+	<script src="https://ynki.website/js/main.js"></script>
+	<script src="https://ynki.website/js/abc.js"></script>
+	<script src="https://ynki.website/js/xyz.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 
@@ -57,9 +57,22 @@
     .posts-column { max-width: 1200px; width: 100%; box-sizing: border-box; padding: 0 1rem; }
     .posts { max-width: 920px; margin: 0 auto; }
     .posts .post { max-width: 100%; }
-    @media (max-width: 1000px) {
+    @media (max-width: 700px) {
       .posts-column { max-width: 100%; padding: 0 0.8rem; }
       .posts { max-width: 100%; }
+    }
+    @media (max-width: 600px) {
+      .posts-column { max-width: 100%; padding: 0 0.6rem; }
+      .posts { max-width: 100%; padding: 0; }
+      .post { text-align: center; margin: 0.8rem auto; max-width: 100%; }
+    }
+    @media (max-width: 480px) {
+      .posts-layout { justify-content: center; }
+      .posts-column { max-width: 100%; padding: 0 0.4rem; width:100%; }
+      .posts { max-width: 100%; padding: 0; }
+      .post { text-align: center; margin: 0.6rem auto; }
+      .post .title { font-size: 0.95rem; }
+      .post .description { font-size: 0.8rem; }
     }
 
      
@@ -238,14 +251,14 @@
      
     @media (max-width: 700px) {
        
-      #contact { padding:0.9rem; margin:1.6rem auto; max-width:540px; box-sizing:border-box; width:calc(100% - 32px); left:50%; transform:translateX(-50%); position:relative }
+      #contact { padding:1rem; margin:1.2rem auto; max-width:100%; box-sizing:border-box; width:calc(100% - 2rem); left:50%; transform:translateX(-50%); position:relative; border-radius:12px; }
    
-  .contact-grid { display:flex; flex-direction:column; align-items:center; gap:0.9rem; width:100% }
+  .contact-grid { display:flex; flex-direction:column; align-items:center; gap:0.8rem; width:100% }
      
-      .contact-left { display:none !important; order:1; width:100%; max-width:540px; margin:0 auto }
+      .contact-left { display:none !important; order:1; width:100%; max-width:100%; margin:0 auto }
        
-      .contact-right { display:none !important; order:1; width:100%; max-width:540px; margin:0 auto }
-    .contact-left, .contact-right { padding:0.9rem; box-sizing:border-box }
+      .contact-right { display:none !important; order:1; width:100%; max-width:100%; margin:0 auto }
+    .contact-left, .contact-right { padding:1rem; box-sizing:border-box }
 
      
       .contact-left h2 { display:none !important }
@@ -253,18 +266,18 @@
 
    
   .types-grid { grid-template-columns: repeat(3, 1fr); gap:0.6rem }
-  .type-tile { padding:14px; border-radius:12px; min-height:72px; display:flex; align-items:center; justify-content:center; flex-direction:column }
-  .type-tile .label { font-size:0.95rem; line-height:1.1 }
+  .type-tile { padding:12px; border-radius:10px; min-height:65px; display:flex; align-items:center; justify-content:center; flex-direction:column }
+  .type-tile .label { font-size:0.9rem; line-height:1 }
 
    
-  .chips-grid { display:flex; flex-wrap:wrap; gap:0.45rem; justify-content:flex-start }
-  .chips-grid .chip-select { white-space:normal; flex:0 1 auto; padding:6px 10px; font-size:0.86rem }
+  .chips-grid { display:flex; flex-wrap:wrap; gap:0.4rem; justify-content:flex-start }
+  .chips-grid .chip-select { white-space:normal; flex:0 1 auto; padding:5px 9px; font-size:0.84rem }
 
    
-  .project-form input[type="text"], .project-form input[type="email"], .project-form textarea, .project-form select, .project-form input[name="contact"] { height:48px; font-size:0.98rem }
+  .project-form input[type="text"], .project-form input[type="email"], .project-form textarea, .project-form select, .project-form input[name="contact"] { height:46px; font-size:0.96rem }
   .project-form textarea { min-height:110px }
       .request-row { flex-direction:column; gap:0.5rem }
-      .request-row .send-btn { width:100% }
+      .request-row .send-btn { width:100%; padding:11px 16px }
 
    
   .preview-box { min-height:80px }
@@ -278,7 +291,7 @@
       .preview-badge { top:8px; right:8px; font-size:0.78rem; padding:6px 8px }
 
    
-  .contact-right { margin: 0 auto; max-width: 520px; box-sizing: border-box; width:100%; background: linear-gradient(180deg, rgba(10,6,16,0.6), rgba(8,4,12,0.6)); border-radius:14px; padding:18px }
+  .contact-right { margin: 0 auto; max-width: 100%; box-sizing: border-box; width:100%; background: linear-gradient(180deg, rgba(10,6,16,0.8), rgba(8,4,12,0.8)); border-radius:12px; padding:1rem }
    
   .contact-right { float:none; clear:both }
   .contact-right .project-form { align-items: stretch; width:100% }
@@ -292,10 +305,10 @@
   .chips-grid { width:100%; justify-content:flex-start }
 
    
-  .request-row .send-btn { width:100%; padding:12px 18px; border-radius:10px; font-weight:700 }
+  .request-row .send-btn { width:100%; padding:12px 16px; border-radius:10px; font-weight:700 }
 
      
-    .contact-right { width:480px; max-width:480px }
+    .contact-right { width:100%; max-width:100% }
     .contact-right .row { flex-direction: row; gap:0.8rem }
     .contact-right .row .field { width:auto; flex:1 }
     .contact-right .types-grid { grid-template-columns: repeat(3, 1fr) }
@@ -307,14 +320,28 @@
 
      
     @media (max-width: 480px) {
-      .contact-left h2 { font-size:1.35rem }
-      .contact-left .kicker { font-size:0.70rem }
-      .project-form label { font-size:0.8rem }
-      .type-tile .label { font-size:0.92rem }
+      #contact { padding:0.7rem; margin:1rem auto; max-width:100%; width:calc(100% - 1.4rem); border-radius:10px; box-shadow: 0 12px 40px rgba(0,0,0,0.4), inset 0 0 20px rgba(0,0,0,0.2); }
+      .contact-left h2 { font-size:1.1rem; margin-bottom:0.3rem }
+      .contact-left .kicker { font-size:0.65rem; letter-spacing:0.5px; margin-bottom:0.3rem }
+      .contact-left p.lead { font-size:0.8rem; margin-bottom:0.6rem }
+      .chips { gap:0.4rem; margin: 0.4rem 0 0.8rem 0 }
+      .chip { padding: 4px 8px; font-size:0.75rem; border-radius:999px }
+      .project-form label { font-size:0.75rem; margin-bottom:4px }
+      .project-form input[type="text"], .project-form input[type="email"], .project-form textarea, .project-form select, .project-form input[name="contact"] { height:44px; font-size:0.9rem; padding:8px 10px }
+      .project-form input.standard-input { height:44px !important; font-size:0.9rem !important; padding:8px 10px !important }
+      .project-form textarea { min-height:100px }
+      .request-row { gap:0.4rem }
+      .request-row .send-btn { padding:10px 16px; font-size:0.85rem; border-radius:8px }
+      .preview-box { min-height:70px; font-size:0.8rem }
+      .preview-badge { font-size:0.7rem; padding:4px 6px; top:6px; right:6px }
+      .type-tile { padding:10px; min-height:60px; border-radius:10px; font-size:0.8rem }
+      .type-tile .label { font-size:0.8rem }
       .type-tile i { font-size:1rem }
-      .types-grid { grid-template-columns: 1fr; gap:0.5rem }
-      .chip-select { padding:7px 10px; font-size:0.86rem }
-      .preview-badge { font-size:0.72rem }
+      .type-tile.selected::after { width:20px; height:20px; font-size:0.75rem; top:6px; right:8px }
+      .types-grid { gap:0.5rem }
+      .chip-select { padding:5px 8px; font-size:0.8rem }
+      .posts-column { padding: 0 0.6rem }
+      .posts { padding: 0 }
     }
   </style>
 
@@ -492,8 +519,8 @@
     .stats{flex-direction:column;align-items:flex-start;gap:0.5rem}
   }
   @media(max-width:600px){
-    .landing-widget{padding:1.2rem 0.8rem}
-    .landing-widget .widget-inner{padding:1rem;border-radius:12px}
+    .landing-widget{padding:1.2rem 0.8rem; width:100%; margin-left:0; position:relative; left:50%; transform:translateX(-50%)}
+    .landing-widget .widget-inner{padding:1rem;border-radius:12px;margin:0 auto}
     .widget-title{font-size:1.35rem}
     .widget-cta .btn{display:block;width:100%;text-align:center;margin-bottom:0.5rem}
     .tag-row{flex-wrap:wrap;font-size:0.8rem}
@@ -507,9 +534,19 @@
     .card-body{font-size:0.9rem}
   }
   @media(max-width:480px){
+    .landing-widget{padding:1rem 0.6rem; width:100%; margin-left:0; position:relative; left:50%; transform:translateX(-50%)}
+    .landing-widget .widget-inner{padding:0.8rem;border-radius:10px;margin:0 auto}
     .widget-title{font-size:1.15rem}
     .widget-sub{font-size:0.8rem}
     .btn{padding:0.7rem 1rem;font-size:0.85rem}
+    .lang-switcher{right:12px;top:12px}
+    .lang-btn{width:40px;height:40px;border-radius:8px}
+    .lang-btn .flag{width:22px;height:16px}
+    .lang-dropdown{top:44px;min-width:140px;padding:0.3rem}
+    .lang-dropdown .lang-item{width:40px;height:36px;margin:0.1rem;font-size:0.85rem}
+    .lang-dropdown .lang-item .flag{width:22px;height:16px}
+    .card-body li{font-size:0.8rem}
+    .pill{font-size:0.7rem;padding:0.2rem 0.5rem}
   }
    
   .lang-switcher{position:absolute;right:18px;top:18px;z-index:30}
@@ -753,8 +790,8 @@
     .project-shape-widget .ps-sub{font-size:0.85rem}
   }
   @media(max-width:700px){
-    .project-shape-widget{padding:1.6rem 1rem}
-    .project-shape-widget .ps-inner{padding:1rem;border-radius:12px}
+    .project-shape-widget{padding:1.6rem 1rem; width:100%; margin-left:0; position:relative; left:50%; transform:translateX(-50%)}
+    .project-shape-widget .ps-inner{padding:1rem;border-radius:12px;margin:0 auto}
     .project-shape-widget .ps-title{font-size:1rem}
     .project-shape-widget .ps-sub{font-size:0.8rem}
     .ps-box{padding:0.8rem}
@@ -764,16 +801,26 @@
     .ps-box{width:100%}
   }
   @media(max-width:600px){
-    .project-shape-widget{padding:1.2rem 0.8rem}
-    .project-shape-widget .ps-inner{padding:0.8rem}
-    .project-shape-widget .eyebrow{font-size:0.7rem}
-    .project-shape-widget .ps-title{font-size:0.95rem}
-    .ps-box{padding:0.6rem}
-    .ps-box h4{font-size:0.65rem;margin-bottom:0.3rem}
-    .ps-box ul li{padding:0.1rem 0;font-size:0.8rem}
+    .project-shape-widget{padding:1.2rem 0.8rem; width:100%; margin-left:0; position:relative; left:50%; transform:translateX(-50%)}
+    .project-shape-widget .ps-inner{padding:0.8rem;gap:0.6rem;margin:0 auto}
+    .project-shape-widget .eyebrow{font-size:0.7rem;margin-bottom:0.4rem}
+    .project-shape-widget .ps-title{font-size:0.95rem;line-height:1.25;text-align:center}
+    .project-shape-widget .ps-sub{font-size:0.75rem;text-align:center}
+    .ps-box{padding:0.6rem;border-radius:8px}
+    .ps-box h4{font-size:0.65rem;margin-bottom:0.3rem;letter-spacing:0.5px}
+    .ps-box ul li{padding:0.1rem 0;font-size:0.8rem;color:#cbdbe8}
+    .ps-box .muted{font-size:0.72rem;padding:0.3rem 0.5rem}
   }
   @media(max-width:480px){
-    .project-shape-widget .ps-title{font-size:0.85rem}
+    .project-shape-widget{padding:1rem 0.6rem; width:100%; margin-left:0; position:relative; left:50%; transform:translateX(-50%)}
+    .project-shape-widget .ps-inner{padding:0.7rem;border-radius:10px;margin:0 auto}
+    .project-shape-widget .ps-title{font-size:0.85rem;text-align:center}
+    .project-shape-widget .ps-sub{font-size:0.7rem;text-align:center}
+    .project-shape-widget .eyebrow{font-size:0.65rem;text-align:center}
+    .ps-boxes{flex-direction:column;gap:0.6rem}
+    .ps-box{padding:0.5rem}
+    .ps-box h4{font-size:0.6rem;margin-bottom:0.2rem}
+    .ps-box ul li{font-size:0.75rem}
   }
   </style>
 </section>
@@ -939,23 +986,26 @@
     .wte-card p{font-size:0.9rem}
   }
   @media(max-width:600px){
-    .what-to-expect-widget{padding:1.2rem 0.8rem}
-    .what-to-expect-widget .wte-inner{padding:0.8rem;border-radius:12px}
+    .what-to-expect-widget{padding:1.2rem 0.8rem; width:100%; margin-left:0; position:relative; left:50%; transform:translateX(-50%)}
+    .what-to-expect-widget .wte-inner{padding:0.9rem;border-radius:12px;margin:0 auto}
     .wte-grid{grid-template-columns:1fr;gap:0.8rem}
-    .wte-header{font-size:1rem;margin-bottom:0.6rem}
-    .wte-card{padding:0.8rem;min-height:160px}
+    .wte-header{font-size:1rem;margin-bottom:0.6rem;text-align:center}
+    .wte-card{padding:0.8rem;min-height:160px;text-align:center}
     .wte-badge{width:28px;height:28px;font-size:0.8rem}
     .wte-icon{font-size:1.1rem;margin-bottom:0.4rem}
     .wte-card h3{font-size:0.9rem;margin-bottom:0.2rem}
     .wte-card p{font-size:0.85rem;line-height:1.3}
   }
   @media(max-width:480px){
-    .wte-header{font-size:0.9rem}
-    .wte-card{padding:0.6rem;min-height:auto}
-    .wte-badge{width:24px;height:24px;font-size:0.75rem}
-    .wte-icon{font-size:0.95rem}
-    .wte-card h3{font-size:0.8rem}
-    .wte-card p{font-size:0.75rem}
+    .what-to-expect-widget{padding:1rem 0.6rem; width:100%; margin-left:0; position:relative; left:50%; transform:translateX(-50%)}
+    .what-to-expect-widget .wte-inner{padding:0.7rem;border-radius:10px;margin:0 auto}
+    .wte-grid{gap:0.6rem}
+    .wte-header{font-size:0.85rem;margin-bottom:0.5rem;text-align:center}
+    .wte-card{padding:0.6rem;min-height:140px;border-radius:8px;text-align:center}
+    .wte-badge{width:22px;height:22px;font-size:0.7rem;margin-bottom:0.5rem}
+    .wte-icon{font-size:1rem;margin-bottom:0.3rem;color:#8a90a0}
+    .wte-card h3{font-size:0.75rem;margin-bottom:0.15rem;font-weight:600}
+    .wte-card p{font-size:0.7rem;line-height:1.25}
   }
   </style>
 </section>
@@ -1086,20 +1136,28 @@
       .how-small{font-size:0.65rem;margin-top:0.5rem}
     }
     @media(max-width:600px){
-      .how-we-work-widget{padding:1.2rem 0.8rem}
-      .how-we-work-widget .widget-inner{padding:0.8rem;border-radius:12px}
+      .how-we-work-widget{padding:1.2rem 0.8rem; width:100%; margin-left:0; position:relative; left:50%; transform:translateX(-50%)}
+      .how-we-work-widget .widget-inner{padding:0.9rem;border-radius:12px;margin:0 auto}
       .how-grid{grid-template-columns:1fr;gap:0.8rem}
-      .how-head{flex-direction:column;align-items:flex-start;gap:0.5rem}
-      .how-legend{flex-direction:row;font-size:0.7rem}
+      .how-head{flex-direction:column;align-items:center;gap:0.5rem;text-align:center}
+      .how-legend{flex-direction:row;font-size:0.7rem;justify-content:center}
       .how-bar{width:100px}
-      .how-col{padding:0.7rem;min-height:auto}
-      .how-col h4{font-size:0.75rem}
-      .how-col p{font-size:0.7rem}
+      .how-col{padding:0.8rem;min-height:auto;text-align:center}
+      .how-col h4{font-size:0.75rem;text-align:center}
+      .how-col p{font-size:0.7rem;text-align:center}
     }
     @media(max-width:480px){
-      .how-col h4{font-size:0.7rem}
-      .how-col p{font-size:0.65rem}
-      .how-small{font-size:0.6rem}
+      .how-we-work-widget{padding:1rem 0.6rem; width:100%; margin-left:0; position:relative; left:50%; transform:translateX(-50%)}
+      .how-we-work-widget .widget-inner{padding:0.6rem;border-radius:10px;margin:0 auto}
+      .how-head{flex-direction:column;align-items:center;gap:0.4rem;text-align:center}
+      .how-grid{gap:0.6rem}
+      .how-col{padding:0.6rem;min-height:auto;border-radius:8px;text-align:center}
+      .how-col h4{font-size:0.65rem;margin-bottom:0.2rem;font-weight:600;text-align:center}
+      .how-col p{font-size:0.6rem;line-height:1.2;text-align:center}
+      .how-small{font-size:0.55rem;margin-top:0.3rem}
+      .how-legend{font-size:0.65rem;justify-content:center}
+      .how-bar{width:80px}
+      .eyebrow{font-size:0.7rem;text-align:center}
     }
   </style>
 
@@ -1376,22 +1434,28 @@
 		.service-card p{font-size:0.85rem}
 	}
 	@media(max-width:600px){
+		.services-widget{padding:1.2rem 0.8rem; width:100%; margin-left:0; position:relative; left:50%; transform:translateX(-50%)}
+		.services-widget .widget-inner{padding:0.9rem;border-radius:0;margin:0 auto}
 		.services-grid{gap:0.7rem;padding:0 0.8rem 0.6rem 0.8rem}
-		.service-card{flex:0 0 100%;min-width:auto;padding:0.8rem;min-height:auto;gap:0.6rem}
-		.services-widget{padding:1.2rem 0}
-		.services-widget .widget-inner{padding:0.8rem;border-radius:0}
+		.service-card{flex:0 0 100%;min-width:auto;padding:0.8rem;min-height:auto;gap:0.6rem;border-radius:8px}
 		.services-head{padding:0 0.8rem}
-		.services-title{font-size:1.1rem}
+		.services-title{font-size:1.1rem;text-align:center}
 		.services-sub{font-size:0.8rem;margin-bottom:0.6rem}
 		.service-visual i{font-size:32px}
-		.service-card h3{font-size:0.9rem}
-		.service-card p{font-size:0.78rem;line-height:1.25}
+		.service-card h3{font-size:0.9rem;text-align:center}
+		.service-card p{font-size:0.78rem;line-height:1.25;text-align:center}
 	}
 	@media(max-width:480px){
-		.services-title{font-size:1rem}
-		.services-sub{font-size:0.75rem}
-		.service-visual i{font-size:28px}
-		.service-card h3{font-size:0.85rem}
+		.services-widget{padding:1rem 0.6rem; width:100%; margin-left:0; position:relative; left:50%; transform:translateX(-50%)}
+		.services-widget .widget-inner{padding:0.7rem;margin:0 auto}
+		.services-title{font-size:0.95rem;margin-bottom:0.3rem;text-align:center}
+		.services-sub{font-size:0.7rem;margin-bottom:0.4rem;text-align:center}
+		.services-head{margin-bottom:0.8rem;padding:0 0.6rem}
+		.services-grid{gap:0.6rem;padding:0 0.6rem 0.4rem 0.6rem}
+		.service-card{flex:0 0 100%;min-width:auto;padding:0.6rem;min-height:140px;border-radius:8px;gap:0.4rem;text-align:center}
+		.service-card h3{font-size:0.8rem}
+		.service-card p{font-size:0.7rem;line-height:1.2}
+		.service-visual i{font-size:24px}
 	}
 	</style>
 
@@ -1605,12 +1669,11 @@
 		.why-us-title{font-size:1.5rem}
 	}
 	@media(max-width:700px){
+		.why-us-widget{padding:1.6rem 0; width:100%; margin-left:0; position:relative; left:50%; transform:translateX(-50%)}
+		.why-us-widget .widget-inner{padding:1rem}
 		.why-us-grid{gap:0.8rem;padding:0 1rem;grid-template-columns:1fr}
 		.why-us-card{flex:0 0 calc(50% - 0.4rem);padding:1rem}
 		.why-us-card:nth-child(4){grid-column:auto}
-		.why-us-widget{padding:1.6rem 0}
-		.why-us-widget .widget-inner{padding:1rem}
-		.why-us-head{margin-bottom:1rem;padding:0 1rem}
 		.why-us-title{font-size:1.3rem}
 		.why-us-icon i{font-size:36px}
 		.why-us-card h3{font-size:0.95rem}
@@ -1619,20 +1682,27 @@
 		.project-name { padding:3px 8px; font-size:0.75rem }
 	}
 	@media(max-width:600px){
+		.why-us-widget{padding:1.2rem 0.8rem; width:100%; margin-left:0; position:relative; left:50%; transform:translateX(-50%)}
+		.why-us-widget .widget-inner{padding:0.8rem;margin:0 auto}
 		.why-us-grid{gap:0.7rem;padding:0 0.8rem;grid-template-columns:1fr}
 		.why-us-card{flex:0 0 100%;padding:0.8rem}
-		.why-us-widget{padding:1.2rem 0}
-		.why-us-widget .widget-inner{padding:0.8rem}
-		.why-us-head{padding:0 0.8rem}
-		.why-us-title{font-size:1.1rem}
+		.why-us-title{font-size:1.1rem;text-align:center}
 		.why-us-icon i{font-size:32px}
-		.why-us-card h3{font-size:0.9rem}
-		.why-us-card p{font-size:0.78rem;line-height:1.25}
+		.why-us-card h3{font-size:0.9rem;text-align:center}
+		.why-us-card p{font-size:0.78rem;line-height:1.25;text-align:center}
 	}
 	@media(max-width:480px){
-		.why-us-title{font-size:1rem}
+		.why-us-widget{padding:1rem 0.6rem; width:100%; margin-left:0; position:relative; left:50%; transform:translateX(-50%)}
+		.why-us-widget .widget-inner{padding:0.6rem;margin:0 auto}
+		.why-us-grid{gap:0.6rem;padding:0 0.6rem}
+		.why-us-title{font-size:0.95rem;text-align:center}
+		.why-us-head{margin-bottom:0.8rem;padding:0 0.6rem}
+		.why-us-card{padding:0.6rem;border-radius:8px;gap:0.4rem;text-align:center}
 		.why-us-icon i{font-size:28px}
-		.why-us-card h3{font-size:0.85rem}
+		.why-us-card h3{font-size:0.8rem;margin-bottom:0.2rem}
+		.why-us-card p{font-size:0.7rem;line-height:1.2}
+		.projects-list{gap:0.3rem;margin-top:0.4rem}
+		.project-name{padding:2px 6px;font-size:0.65rem}
 	}
 	</style>
 
@@ -1848,17 +1918,25 @@
   </div>
 </section>
 
-<footer style="margin-top: 3rem; padding: 2rem 0; text-align: center; font-size: 0.9rem; color: #888; border-top: 1px solid #222;">
+<footer style="margin-top: 3rem; padding: 2rem 1.25rem; text-align: center; font-size: 0.9rem; color: #888; border-top: 1px solid #222; width:100vw; margin-left:calc(50% - 50vw); box-sizing:border-box;">
   <p style="margin: 0.2rem 0;">Everything written here was tested by time. ©2018 copyright</p>
   <p style="margin: 0.2rem 0;">
     <a href="https://github.com/ynki0" style="color: #f92672; text-decoration: none;">GitHub</a> ·
     <a href="https://t.me/ynki01" style="color: #f92672; text-decoration: none;">Telegram</a> ·
     <a href="https://discord.com/invite/QpKnRjCrUm" style="color: #f92672; text-decoration: none;">Discord</a>
   </p>
- 
-
-
-
+  <style>
+    footer { margin-top: 3rem; padding: 2rem 1.25rem; text-align: center; font-size: 0.9rem; color: #888; border-top: 1px solid #222; width:100vw; margin-left:calc(50% - 50vw); box-sizing:border-box; }
+    @media(max-width: 700px) {
+      footer { padding: 1.5rem 0.8rem; font-size: 0.85rem; margin-top: 1.5rem; }
+      footer p { margin: 0.15rem 0; }
+      footer a { color: #f92672; }
+    }
+    @media(max-width: 480px) {
+      footer { padding: 1rem 0.6rem; font-size: 0.8rem; margin-top: 1rem; margin-left:calc(50% - 50vw); width:100vw; }
+      footer p { margin: 0.1rem 0; font-size: 0.75rem; }
+    }
+  </style>
 </footer>
 
 

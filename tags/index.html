@@ -147,17 +147,25 @@
 		</div>
 	</div>
 
-	<footer style="margin-top: 3rem; padding: 2rem 0; text-align: center; font-size: 0.9rem; color: #888; border-top: 1px solid #222;">
+	<footer style="margin-top: 3rem; padding: 2rem 1.25rem; text-align: center; font-size: 0.9rem; color: #888; border-top: 1px solid #222; width:100vw; margin-left:calc(50% - 50vw); box-sizing:border-box;">
   <p style="margin: 0.2rem 0;">Everything written here was tested by time. ©2018 copyright</p>
   <p style="margin: 0.2rem 0;">
     <a href="https://github.com/ynki0" style="color: #f92672; text-decoration: none;">GitHub</a> ·
     <a href="https://t.me/ynki01" style="color: #f92672; text-decoration: none;">Telegram</a> ·
     <a href="https://discord.com/invite/QpKnRjCrUm" style="color: #f92672; text-decoration: none;">Discord</a>
   </p>
- 
-
-
-
+  <style>
+    footer { margin-top: 3rem; padding: 2rem 1.25rem; text-align: center; font-size: 0.9rem; color: #888; border-top: 1px solid #222; width:100vw; margin-left:calc(50% - 50vw); box-sizing:border-box; }
+    @media(max-width: 700px) {
+      footer { padding: 1.5rem 0.8rem; font-size: 0.85rem; margin-top: 1.5rem; }
+      footer p { margin: 0.15rem 0; }
+      footer a { color: #f92672; }
+    }
+    @media(max-width: 480px) {
+      footer { padding: 1rem 0.6rem; font-size: 0.8rem; margin-top: 1rem; margin-left:calc(50% - 50vw); width:100vw; }
+      footer p { margin: 0.1rem 0; font-size: 0.75rem; }
+    }
+  </style>
 </footer>
 
 </body>
