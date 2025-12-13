@@ -8,10 +8,10 @@
 
     <item turbo="true">
       <title>Ynki - Leading Development</title>
-      <link>https://ynki.website/?lang=eu</link>
-      <turbo:source>https://ynki.website/?lang=eu</turbo:source>
+      <link>https://ynki.website/en</link>
+      <turbo:source>https://ynki.website/en</turbo:source>
       <turbo:topic>Ynki - Leading Development</turbo:topic>
-      <pubDate>Sat, 13 Dec 2025 08:23:34 GMT</pubDate>
+      <pubDate>Sat, 13 Dec 2025 10:23:17 GMT</pubDate>
       <turbo:content><![CDATA[
       <header>
         <h1>Ynki - Leading Development</h1>
@@ -23,7 +23,7 @@
       </section>
       <section>
         <h2>Ynki FAQ</h2>
-        <details><summary>What projects do you take on?</summary><p>We focus on internal tools, automation layers, admin panels, and SaaS products that support operational work and scale without pain.</p></details><details><summary>How do you share progress?</summary><p>We provide access to repositories, dashboards, time tracking, and regular updates, so progress is always transparent.</p></details><details><summary>When can we start?</summary><p>Discovery, planning and kickoff typically begin within a week. Share the key project context through the consultation form and we help scope the next steps.</p></details><details><summary>What experience do you have?</summary><p>We have launched various licensed digital products with large user audiences. We have supported projects such as "Prometheus," "Starcheat," "Velocity," and "Shell-Store."</p></details><details><summary>How can we be sure you are reliable?</summary><p>We are open and transparent in our development process. We have a reputation on various forums and are willing to work through escrow or guarantee systems from the user.</p></details>
+        <details><summary>What projects do you take on?</summary><p>We focus on internal tools, automation layers, admin panels, and SaaS products that support operational work and scale without pain.</p></details><details><summary>How do you share progress?</summary><p>We provide access to repositories, dashboards, time tracking, and regular updates, so progress is always transparent.</p></details><details><summary>When can we start?</summary><p>Discovery, planning and kickoff typically begin within a week. Share the key project context through the consultation form and we help scope the next steps.</p></details><details><summary>What experience do you have?</summary><p>We have launched various licensed digital products with large user audiences. We have supported projects such as "Prometheus" "Starcheat" "Velocity" "Shell-Store."</p></details><details><summary>How can we be sure you are reliable?</summary><p>We are open and transparent in our development process. We have a reputation on various forums and are willing to work through escrow or guarantee systems from the user.</p></details>
       </section>
       <section>
         <h2>How Ynki delivers software projects</h2>
@@ -35,10 +35,10 @@
 
     <item turbo="true">
       <title>Ynki — Ведущая Разработка</title>
-      <link>https://ynki.website/?lang=ru</link>
-      <turbo:source>https://ynki.website/?lang=ru</turbo:source>
+      <link>https://ynki.website/ru</link>
+      <turbo:source>https://ynki.website/ru</turbo:source>
       <turbo:topic>Ynki — Ведущая Разработка</turbo:topic>
-      <pubDate>Sat, 13 Dec 2025 08:23:34 GMT</pubDate>
+      <pubDate>Sat, 13 Dec 2025 10:23:17 GMT</pubDate>
       <turbo:content><![CDATA[
       <header>
         <h1>Ynki — Ведущая Разработка</h1>
@@ -54,7 +54,7 @@
       </section>
       <section>
         <h2>Как Ynki ведёт проекты</h2>
-        <ol><li><strong>Инженерия в первую очередь</strong><p>Работаете напрямую с разработчиком, который проектирует, пишет и запускает продукт, поэтому решения прозрачны.</p></li><li><strong>Небольшие шаги и демо</strong><p>Доставляем функциональность короткими итерациями с реальными демонстрациями вместо долгих скрытых этапов.</p></li><li><strong>Прозрачность по умолчанию</strong><p>Даем доступ к кодовым базам, метрикам, трекингу времени и статусам, чтобы статус проекта всегда был понятен.</p></li><li><strong>Сфокусированная поставка</strong><p>Держим план lean, чтобы релизы выходили предсказуемо и поддерживали реалистичные дорожные карты.</p></li></ol>
+        <ol><li><strong>Инженерия в первую очередь</strong><p>Никаких продавцов и посредников. Вы общаетесь напрямую с разработчиком, который проектирует, пишет и запускает ваш продукт.</p></li><li><strong>Небольшие шаги и демо</strong><p>Предпочитаем небольшие поставки с реальными демо вместо огромных невидимых этапов.</p></li><li><strong>Прозрачность по умолчанию</strong><p>Доступ к репозиториям, админкам, трекингу времени и статусу проекта без дополнительных запросов.</p></li><li><strong>Сфокусированная поставка</strong><p>Держим приоритеты узкими и выпускаем предсказуемые, надежные релизы — чтобы вам было удобно планировать рост.</p></li><li><strong>Как убедиться, что вы надежны?</strong><p>Открыты и прозрачны в области разработки. Имеем репутацию на различных форумах готовые работать через холд или гарант систему от пользователя.</p></li></ol>
       </section>
   ]]></turbo:content>
     </item>
