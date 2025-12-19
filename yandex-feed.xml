@@ -3,62 +3,116 @@
   <channel>
     <title>Ynki</title>
     <link>https://ynki.website/</link>
-    <description>Professional software development services: custom web applications, mobile apps, automation, AI solutions, and full-stack development. Expert developers delivering scalable, reliable digital products since 2018. Transparent pricing, clear milestones, measurable results. Contact us for your development project.</description>
+    <description>Профессиональная разработка программного обеспечения: веб-приложения, мобильные приложения, автоматизация, AI решения, fullstack разработка. Эксперты создают надёжные цифровые продукты с 2018 года. Прозрачные цены, чёткие этапы, измеримые результаты. Закажите разработку у профессионалов.</description>
     <language>ru</language>
 
     <item turbo="true">
-      <title>Ynki - Professional Software Development &amp; Custom Solutions | Expert Developers</title>
-      <link>https://ynki.website/en</link>
-      <turbo:source>https://ynki.website/en</turbo:source>
-      <turbo:topic>Ynki - Professional Software Development &amp; Custom Solutions | Expert Developers</turbo:topic>
-      <pubDate>Thu, 18 Dec 2025 22:21:51 GMT</pubDate>
-      <yandex:full-text>Ynki - Professional Software Development &amp; Custom Solutions | Expert Developers Professional software development services: custom web applications, mobile apps, automation, AI solutions, and full-stack development. Expert developers delivering scalable, reliable digital products since 2018. Transparent pricing, clear milestones, measurable results. Contact us for your development project. Web Development: Fast, scalable marketing sites, customer portals and internal dashboards.. Automation &amp; AI Solutions: Jobs, bots and ML-powered workflows that remove repetitive manual work.. Backend / API Development: Robust APIs, integrations and data layers that power products reliably.. UI/UX Design: Research-driven product design, prototyping and usability refinements.. App Development: Native and cross-platform apps that keep users engaged on mobile or desktop. What projects do you take on? — We focus on internal tools, automation layers, admin panels, and SaaS products that support operational work and scale without pain. How do you share progress? — We provide access to repositories, dashboards, time tracking, and regular updates, so progress is always transparent. When can we start? — Discovery, planning and kickoff typically begin within a week. Share the key project context through the consultation form and we help scope the next steps. What experience do you have? — We have launched various licensed digital products with large user audiences. We have supported projects such as &quot;Prometheus&quot; &quot;Starcheat&quot; &quot;Velocity&quot; &quot;Shell-Store.&quot; How can we be sure you are reliable? — We are open and transparent in our development process. We have a reputation on various forums and are willing to work through escrow or guarantee systems from the user. Engineering first: Direct collaboration with the developer who architects, builds, and launches each project for transparent decision-making. Small steps, visible progress: Ship in tight, reviewable milestones with real demos instead of long invisible phases. Transparent by default: Provide access to repositories, dashboards, time tracking, and health metrics so stakeholders never guess about progress. Focused delivery: Keep priorities lean to ship predictable releases that keep roadmaps realistic and dependable.</yandex:full-text>
-      <turbo:content><![CDATA[
-      <header>
-        <h1>Ynki - Professional Software Development &amp; Custom Solutions | Expert Developers</h1>
-        <p>Professional software development services: custom web applications, mobile apps, automation, AI solutions, and full-stack development. Expert developers delivering scalable, reliable digital products since 2018. Transparent pricing, clear milestones, measurable results. Contact us for your development project.</p>
-      </header>
-      <section>
-        <h2>Service catalog</h2>
-        <ul><li><strong>Web Development</strong><p>Fast, scalable marketing sites, customer portals and internal dashboards.</p></li><li><strong>Automation &amp; AI Solutions</strong><p>Jobs, bots and ML-powered workflows that remove repetitive manual work.</p></li><li><strong>Backend / API Development</strong><p>Robust APIs, integrations and data layers that power products reliably.</p></li><li><strong>UI/UX Design</strong><p>Research-driven product design, prototyping and usability refinements.</p></li><li><strong>App Development</strong><p>Native and cross-platform apps that keep users engaged on mobile or desktop.</p></li></ul>
-      </section>
-      <section>
-        <h2>Ynki FAQ</h2>
-        <details><summary>What projects do you take on?</summary><p>We focus on internal tools, automation layers, admin panels, and SaaS products that support operational work and scale without pain.</p></details><details><summary>How do you share progress?</summary><p>We provide access to repositories, dashboards, time tracking, and regular updates, so progress is always transparent.</p></details><details><summary>When can we start?</summary><p>Discovery, planning and kickoff typically begin within a week. Share the key project context through the consultation form and we help scope the next steps.</p></details><details><summary>What experience do you have?</summary><p>We have launched various licensed digital products with large user audiences. We have supported projects such as "Prometheus" "Starcheat" "Velocity" "Shell-Store."</p></details><details><summary>How can we be sure you are reliable?</summary><p>We are open and transparent in our development process. We have a reputation on various forums and are willing to work through escrow or guarantee systems from the user.</p></details>
-      </section>
-      <section>
-        <h2>How Ynki delivers software projects</h2>
-        <ol><li><strong>Engineering first</strong><p>Direct collaboration with the developer who architects, builds, and launches each project for transparent decision-making.</p></li><li><strong>Small steps, visible progress</strong><p>Ship in tight, reviewable milestones with real demos instead of long invisible phases.</p></li><li><strong>Transparent by default</strong><p>Provide access to repositories, dashboards, time tracking, and health metrics so stakeholders never guess about progress.</p></li><li><strong>Focused delivery</strong><p>Keep priorities lean to ship predictable releases that keep roadmaps realistic and dependable.</p></li></ol>
-      </section>
-  ]]></turbo:content>
+      <title>Главная — Ynki</title>
+      <link>https://ynki.website/</link>
+      <turbo:source>https://ynki.website/</turbo:source>
+      <turbo:topic>Главная — Ynki</turbo:topic>
+      <pubDate>Fri, 19 Dec 2025 02:49:53 GMT</pubDate>
+      <yandex:full-text>Профессиональная разработка программного обеспечения: веб-приложения, мобильные приложения, автоматизация, AI решения, fullstack разработка. Эксперты создают надёжные цифровые продукты с 2018 года. Прозрачные цены, чёткие этапы, измеримые результаты. Закажите разработку у профессионалов.</yandex:full-text>
+      <turbo:content><![CDATA[<header><h1>Главная — Ynki</h1><p>Профессиональная разработка программного обеспечения: веб-приложения, мобильные приложения, автоматизация, AI решения, fullstack разработка. Эксперты создают надёжные цифровые продукты с 2018 года. Прозрачные цены, чёткие этапы, измеримые результаты. Закажите разработку у профессионалов.</p></header>]]></turbo:content>
     </item>
   
 
     <item turbo="true">
-      <title>Ynki — Профессиональная Разработка Сайтов и Приложений | Заказать Разработку</title>
+      <title>Home — Ynki</title>
+      <link>https://ynki.website/en</link>
+      <turbo:source>https://ynki.website/en</turbo:source>
+      <turbo:topic>Home — Ynki</turbo:topic>
+      <pubDate>Fri, 19 Dec 2025 02:49:53 GMT</pubDate>
+      <yandex:full-text>Professional software development services: custom web applications, mobile apps, automation, AI solutions, and full-stack development. Expert developers delivering scalable, reliable digital products since 2018. Transparent pricing, clear milestones, measurable results. Contact us for your development project.</yandex:full-text>
+      <turbo:content><![CDATA[<header><h1>Home — Ynki</h1><p>Professional software development services: custom web applications, mobile apps, automation, AI solutions, and full-stack development. Expert developers delivering scalable, reliable digital products since 2018. Transparent pricing, clear milestones, measurable results. Contact us for your development project.</p></header>]]></turbo:content>
+    </item>
+  
+
+    <item turbo="true">
+      <title>Главная — Ynki</title>
       <link>https://ynki.website/ru</link>
       <turbo:source>https://ynki.website/ru</turbo:source>
-      <turbo:topic>Ynki — Профессиональная Разработка Сайтов и Приложений | Заказать Разработку</turbo:topic>
-      <pubDate>Thu, 18 Dec 2025 22:21:51 GMT</pubDate>
-      <yandex:full-text>Ynki — Профессиональная Разработка Сайтов и Приложений | Заказать Разработку Профессиональная разработка программного обеспечения: веб-приложения, мобильные приложения, автоматизация, AI решения, fullstack разработка. Эксперты создают надёжные цифровые продукты с 2018 года. Прозрачные цены, чёткие этапы, измеримые результаты. Закажите разработку у профессионалов. Веб-разработка: Быстрые и масштабируемые сайты, клиентские порталы и внутренние дашборды.. Автоматизация и AI: Джобы, боты и ML‑процессы, которые убирают рутину и сокращают операционные затраты.. Backend / API: Надёжные API, интеграции и дата‑слои, которые становятся фундаментом продукта.. UI/UX дизайн: Продуктовый дизайн, исследование пользовательского опыта и прототипирование.. Мобильные и десктоп приложения: Нативные и кроссплатформенные продукты, удерживающие пользователей на любых устройствах. Какие проекты вы берёте? — Фокусируемся на внутренних инструментах, слоях автоматизации, админ-панелях и SaaS‑продуктах, которые поддерживают операционную работу и масштабируются без боли. Как вы делитесь прогрессом? — Предоставляем доступ к репозиториям, дашбордам, учёту времени и регулярным апдейтам, поэтому прогресс всегда прозрачен. Когда можно стартовать? — Исследование, планирование и запуск обычно начинаются в течение недели. Поделитесь техническим заданием через форму консультации. Какой опыт у вас? — Запускали различные цифровые продукты с лицензией которые имели большую аудиторию пользователей. Поддерживали такие проекты как &quot;Prometheus&quot; &quot;Starcheat&quot; &quot;Velocity&quot; &quot;Shell-Store&quot;. Как убедиться, что вы надежны? — Открыты и прозрачны в области разработки. Имеем репутацию на различных форумах готовые работать через холд или гарант систему от пользователя. Инженерия в первую очередь: Никаких продавцов и посредников. Вы общаетесь напрямую с разработчиком, который проектирует, пишет и запускает ваш продукт. Небольшие шаги и демо: Предпочитаем небольшие поставки с реальными демо вместо огромных невидимых этапов. Прозрачность по умолчанию: Доступ к репозиториям, админкам, трекингу времени и статусу проекта без дополнительных запросов. Сфокусированная поставка: Держим приоритеты узкими и выпускаем предсказуемые, надежные релизы — чтобы вам было удобно планировать рост. Как убедиться, что вы надежны?: Открыты и прозрачны в области разработки. Имеем репутацию на различных форумах готовые работать через холд или гарант систему от пользователя.</yandex:full-text>
-      <turbo:content><![CDATA[
-      <header>
-        <h1>Ynki — Профессиональная Разработка Сайтов и Приложений | Заказать Разработку</h1>
-        <p>Профессиональная разработка программного обеспечения: веб-приложения, мобильные приложения, автоматизация, AI решения, fullstack разработка. Эксперты создают надёжные цифровые продукты с 2018 года. Прозрачные цены, чёткие этапы, измеримые результаты. Закажите разработку у профессионалов.</p>
-      </header>
-      <section>
-        <h2>Каталог услуг</h2>
-        <ul><li><strong>Веб-разработка</strong><p>Быстрые и масштабируемые сайты, клиентские порталы и внутренние дашборды.</p></li><li><strong>Автоматизация и AI</strong><p>Джобы, боты и ML‑процессы, которые убирают рутину и сокращают операционные затраты.</p></li><li><strong>Backend / API</strong><p>Надёжные API, интеграции и дата‑слои, которые становятся фундаментом продукта.</p></li><li><strong>UI/UX дизайн</strong><p>Продуктовый дизайн, исследование пользовательского опыта и прототипирование.</p></li><li><strong>Мобильные и десктоп приложения</strong><p>Нативные и кроссплатформенные продукты, удерживающие пользователей на любых устройствах.</p></li></ul>
-      </section>
-      <section>
-        <h2>Частые вопросы Ynki</h2>
-        <details><summary>Какие проекты вы берёте?</summary><p>Фокусируемся на внутренних инструментах, слоях автоматизации, админ-панелях и SaaS‑продуктах, которые поддерживают операционную работу и масштабируются без боли.</p></details><details><summary>Как вы делитесь прогрессом?</summary><p>Предоставляем доступ к репозиториям, дашбордам, учёту времени и регулярным апдейтам, поэтому прогресс всегда прозрачен.</p></details><details><summary>Когда можно стартовать?</summary><p>Исследование, планирование и запуск обычно начинаются в течение недели. Поделитесь техническим заданием через форму консультации.</p></details><details><summary>Какой опыт у вас?</summary><p>Запускали различные цифровые продукты с лицензией которые имели большую аудиторию пользователей. Поддерживали такие проекты как "Prometheus" "Starcheat" "Velocity" "Shell-Store".</p></details><details><summary>Как убедиться, что вы надежны?</summary><p>Открыты и прозрачны в области разработки. Имеем репутацию на различных форумах готовые работать через холд или гарант систему от пользователя.</p></details>
-      </section>
-      <section>
-        <h2>Как Ynki ведёт проекты</h2>
-        <ol><li><strong>Инженерия в первую очередь</strong><p>Никаких продавцов и посредников. Вы общаетесь напрямую с разработчиком, который проектирует, пишет и запускает ваш продукт.</p></li><li><strong>Небольшие шаги и демо</strong><p>Предпочитаем небольшие поставки с реальными демо вместо огромных невидимых этапов.</p></li><li><strong>Прозрачность по умолчанию</strong><p>Доступ к репозиториям, админкам, трекингу времени и статусу проекта без дополнительных запросов.</p></li><li><strong>Сфокусированная поставка</strong><p>Держим приоритеты узкими и выпускаем предсказуемые, надежные релизы — чтобы вам было удобно планировать рост.</p></li><li><strong>Как убедиться, что вы надежны?</strong><p>Открыты и прозрачны в области разработки. Имеем репутацию на различных форумах готовые работать через холд или гарант систему от пользователя.</p></li></ol>
-      </section>
-  ]]></turbo:content>
+      <turbo:topic>Главная — Ynki</turbo:topic>
+      <pubDate>Fri, 19 Dec 2025 02:49:53 GMT</pubDate>
+      <yandex:full-text>Профессиональная разработка программного обеспечения: веб-приложения, мобильные приложения, автоматизация, AI решения, fullstack разработка. Эксперты создают надёжные цифровые продукты с 2018 года. Прозрачные цены, чёткие этапы, измеримые результаты. Закажите разработку у профессионалов.</yandex:full-text>
+      <turbo:content><![CDATA[<header><h1>Главная — Ynki</h1><p>Профессиональная разработка программного обеспечения: веб-приложения, мобильные приложения, автоматизация, AI решения, fullstack разработка. Эксперты создают надёжные цифровые продукты с 2018 года. Прозрачные цены, чёткие этапы, измеримые результаты. Закажите разработку у профессионалов.</p></header>]]></turbo:content>
+    </item>
+  
+
+    <item turbo="true">
+      <title>Веб-разработка</title>
+      <link>https://ynki.website/web-development</link>
+      <turbo:source>https://ynki.website/web-development</turbo:source>
+      <turbo:topic>Веб-разработка</turbo:topic>
+      <pubDate>Fri, 19 Dec 2025 02:49:53 GMT</pubDate>
+      <yandex:full-text>Быстрые и масштабируемые сайты, клиентские порталы и внутренние дашборды.</yandex:full-text>
+      <turbo:content><![CDATA[<header><h1>Веб-разработка</h1><p>Быстрые и масштабируемые сайты, клиентские порталы и внутренние дашборды.</p></header>]]></turbo:content>
+    </item>
+  
+
+    <item turbo="true">
+      <title>UI/UX дизайн</title>
+      <link>https://ynki.website/ui-ux-design</link>
+      <turbo:source>https://ynki.website/ui-ux-design</turbo:source>
+      <turbo:topic>UI/UX дизайн</turbo:topic>
+      <pubDate>Fri, 19 Dec 2025 02:49:53 GMT</pubDate>
+      <yandex:full-text>Продуктовый дизайн, исследование пользовательского опыта и прототипирование.</yandex:full-text>
+      <turbo:content><![CDATA[<header><h1>UI/UX дизайн</h1><p>Продуктовый дизайн, исследование пользовательского опыта и прототипирование.</p></header>]]></turbo:content>
+    </item>
+  
+
+    <item turbo="true">
+      <title>Разработка ПО</title>
+      <link>https://ynki.website/software-development</link>
+      <turbo:source>https://ynki.website/software-development</turbo:source>
+      <turbo:topic>Разработка ПО</turbo:topic>
+      <pubDate>Fri, 19 Dec 2025 02:49:53 GMT</pubDate>
+      <yandex:full-text>Надёжные API, интеграции и дата‑слои, которые становятся фундаментом продукта.</yandex:full-text>
+      <turbo:content><![CDATA[<header><h1>Разработка ПО</h1><p>Надёжные API, интеграции и дата‑слои, которые становятся фундаментом продукта.</p></header>]]></turbo:content>
+    </item>
+  
+
+    <item turbo="true">
+      <title>Автоматизация и AI</title>
+      <link>https://ynki.website/automation-ai-solutions</link>
+      <turbo:source>https://ynki.website/automation-ai-solutions</turbo:source>
+      <turbo:topic>Автоматизация и AI</turbo:topic>
+      <pubDate>Fri, 19 Dec 2025 02:49:53 GMT</pubDate>
+      <yandex:full-text>Джобы, боты и ML‑процессы, которые убирают рутину и сокращают операционные затраты.</yandex:full-text>
+      <turbo:content><![CDATA[<header><h1>Автоматизация и AI</h1><p>Джобы, боты и ML‑процессы, которые убирают рутину и сокращают операционные затраты.</p></header>]]></turbo:content>
+    </item>
+  
+
+    <item turbo="true">
+      <title>Разработка приложений</title>
+      <link>https://ynki.website/app-development</link>
+      <turbo:source>https://ynki.website/app-development</turbo:source>
+      <turbo:topic>Разработка приложений</turbo:topic>
+      <pubDate>Fri, 19 Dec 2025 02:49:53 GMT</pubDate>
+      <yandex:full-text>Нативные и кроссплатформенные продукты, удерживающие пользователей на любых устройствах.</yandex:full-text>
+      <turbo:content><![CDATA[<header><h1>Разработка приложений</h1><p>Нативные и кроссплатформенные продукты, удерживающие пользователей на любых устройствах.</p></header>]]></turbo:content>
+    </item>
+  
+
+    <item turbo="true">
+      <title>Цены на разработку</title>
+      <link>https://ynki.website/pricing</link>
+      <turbo:source>https://ynki.website/pricing</turbo:source>
+      <turbo:topic>Цены на разработку</turbo:topic>
+      <pubDate>Fri, 19 Dec 2025 02:49:53 GMT</pubDate>
+      <yandex:full-text>Прозрачные цены на услуги разработки ПО, сайтов, приложений и автоматизации.</yandex:full-text>
+      <turbo:content><![CDATA[<header><h1>Цены на разработку</h1><p>Прозрачные цены на услуги разработки ПО, сайтов, приложений и автоматизации.</p></header>]]></turbo:content>
+    </item>
+  
+
+    <item turbo="true">
+      <title>О компании Ynki</title>
+      <link>https://ynki.website/about</link>
+      <turbo:source>https://ynki.website/about</turbo:source>
+      <turbo:topic>О компании Ynki</turbo:topic>
+      <pubDate>Fri, 19 Dec 2025 02:49:53 GMT</pubDate>
+      <yandex:full-text>Экспертная команда Ynki — профессиональная разработка с 2018 года.</yandex:full-text>
+      <turbo:content><![CDATA[<header><h1>О компании Ynki</h1><p>Экспертная команда Ynki — профессиональная разработка с 2018 года.</p></header>]]></turbo:content>
     </item>
   
   </channel>
