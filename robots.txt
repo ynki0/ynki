@@ -1,0 +1,18 @@
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ynki.website/sitemap.xml
+
+# Block internal Next.js and API paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404
+Disallow: /en/404
+Disallow: /ru/404
+
+# Allow all main and localized pages
+Allow: /en/
+Allow: /ru/
